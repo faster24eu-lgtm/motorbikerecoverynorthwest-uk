@@ -13,6 +13,7 @@ my @TOWNS = (
       [ 'Trafford Park and the Quays', 'Industrial roads covered in grit and debris, a classic place for punctures.' ],
     ],
     local => 'Motorbike and scooter theft is a real problem in Manchester. If police have found your stolen bike, see <a href="/stolen-motorbike-recovery/">stolen bike collection</a>. The council has dedicated motorcycle bays at the Arndale, King Street West and Bridgewater Hall. Breakdowns in those bays and in city-centre multi-storeys are easy to load from, so tell us the bay or level.',
+    local2 => 'Plenty of our Manchester calls come from commuters and delivery riders on scooters and 125s. If the bike dies in the evening rush, we can take it home or straight to a dealer for the morning. Tell us if a disc lock or alarm is fitted and where the key is; it saves time when we load.',
     roadlinks => [qw(snake-pass cat-and-fiddle)], nearby => [qw(stockport bolton wigan warrington)],
     faq => [
       [ 'How quickly can you reach me in Manchester city centre?', 'Typically 30 to 60 minutes, depending on traffic and the time of day. We give you a realistic estimate on the call.' ],
@@ -29,6 +30,7 @@ my @TOWNS = (
       [ 'Stockport town centre and the pyramid', 'One-way systems and multi-storey car parks.' ],
     ],
     local => 'On sunny weekends, the A6 and the roads out of Stockport fill up with bikes heading for the Peak. If your bike gives up halfway, a lay-by on the A6 or a pub car park is a far better place to wait than the verge on a moor. Pull in, send us your pin, and we&rsquo;ll come out.',
+    local2 => 'Coming back from the Peak with a flat battery or a puncture? A filling station forecourt in Whaley Bridge, Chapel-en-le-Frith or Buxton is a safe place to wait. Tell the staff you&rsquo;re waiting for recovery and give us the name of the station.',
     roadlinks => [qw(cat-and-fiddle snake-pass)], nearby => [qw(manchester warrington)],
     faq => [
       [ 'Do you cover the Peak District roads from Stockport?', 'Yes: the A6 to Buxton, the Cat and Fiddle and the Snake Pass. Remote roads take longer to reach, and we&rsquo;ll tell you how long on the call.' ],
@@ -44,6 +46,7 @@ my @TOWNS = (
       [ 'Middlebrook and Horwich', 'Retail park car parks and the stadium area on event days.' ],
     ],
     local => 'Up on the A675 past Belmont, mobile signal can drop out and there&rsquo;s little shelter. If the bike stops on the moor, get yourself and the bike off the road. A what3words address helps us find you quickly where there are no house numbers.',
+    local2 => 'On fine weekends riders gather around Rivington and Winter Hill. If the bike won&rsquo;t start in a car park there, tell us which one, for example Rivington Hall Barn, and whether the gate closes in the evening.',
     roadlinks => [qw(nick-of-pendle)], nearby => [qw(wigan manchester blackburn-burnley preston)],
     faq => [
       [ 'Can you find me on Belmont Road if I don&rsquo;t know exactly where I am?', 'Yes. Send your live location on WhatsApp or a what3words address, even if you only had signal for a moment.' ],
@@ -59,6 +62,7 @@ my @TOWNS = (
       [ 'Three Sisters Race Circuit, Ashton-in-Makerfield', 'Track day transport and crashed track bikes.' ],
     ],
     local => 'Three Sisters is a popular first track day and training circuit. If you&rsquo;re booked in and your bike isn&rsquo;t road legal, or you don&rsquo;t fancy the ride home after a day of laps, see <a href="/track-day-transport/">track day transport</a>.',
+    local2 => 'Heading to a track day at Three Sisters? We can take the bike to the paddock in the morning and bring it home afterwards, crashed or not. Book ahead on our <a href="/track-day-transport/">track day transport</a> page.',
     roadlinks => [], nearby => [qw(bolton warrington preston liverpool)],
     faq => [
       [ 'Can you take my bike to a Three Sisters track day?', 'Yes, there and back, even if the bike is track-only with no plates or lights.' ],
@@ -74,8 +78,10 @@ my @TOWNS = (
       [ 'A49 and A57 through Warrington town centre', 'Bridge Foot and the town-centre roundabouts.' ],
     ],
     local => 'Warrington&rsquo;s motorway junctions are a natural meeting point. If you&rsquo;ve stopped at a services car park on the M6 or M62, you&rsquo;re in the safest place to wait. Tell us which services and which end of the car park.',
+    local2 => 'Riding between Widnes and Runcorn means crossing the Mersey Gateway or the Silver Jubilee Bridge. Both are fast, exposed roads with little room to stop. If you can, ride on to the far side before you pull over; if you&rsquo;re stuck on the bridge and in danger, call 999 first, then us. Around the Birchwood and Omega business parks we often pick up commuters&rsquo; bikes that won&rsquo;t start after work.',
     roadlinks => [], nearby => [qw(wigan liverpool chester manchester)],
     faq => [
+      [ 'Do you cover the Mersey Gateway and Runcorn?', 'Yes: Runcorn, Widnes and both bridges. If you stop on a bridge, only do so if it is safe; call 999 first if you are in danger.' ],
       [ 'Are you Motor Bike Recovery Northwest from Newton-le-Willows?', 'No. That was a separate local business that used this web address before. We&rsquo;re an independent recovery service covering the same area.' ],
     ],
   },
@@ -89,6 +95,7 @@ my @TOWNS = (
       [ 'Aintree Circuit', 'Track days around the racecourse, and crashed or broken track bikes.' ],
     ],
     local => 'Every year, riders heading for the Isle of Man TT pass through Liverpool for the ferry. A breakdown the night before sailing is a nightmare. If that&rsquo;s you, call straight away. We&rsquo;ll get the bike to a dealer who might fix it in time, or recover it back home if the trip is over. Bikes left overnight in the city are also a theft target, so park somewhere well lit and locked.',
+    local2 => 'If your bike stops inside the Queensway or Kingsway tunnel, stay with it and use the tunnel&rsquo;s emergency point: the tunnel staff move broken-down vehicles out themselves. Once you&rsquo;re out, we take it from there to your home or a garage.',
     roadlinks => [], nearby => [qw(wirral warrington wigan)],
     faq => [
       [ 'My bike broke down on the way to the Isle of Man ferry. Can you help?', 'Yes. Call with your location and sailing time. We&rsquo;ll get it to a dealer quickly, or take it home if you can&rsquo;t sail.' ],
@@ -105,6 +112,7 @@ my @TOWNS = (
       [ 'Birkenhead tunnel approaches', 'Toll booths and queues.' ],
     ],
     local => 'Salt and sand from the coast are hard on bikes. We see seized brake calipers, corroded connectors and chains that snap after a winter ridden near the sea. If your bike has been standing over winter by the coast, a careful check before the first ride saves a recovery call.',
+    local2 => 'The coast road from New Brighton to Hoylake and the M53 down the middle of the peninsula carry most of our Wirral calls. If you&rsquo;re on the promenade, give us the nearest slipway, caf&eacute; or car park so we can find you quickly.',
     roadlinks => [qw(horseshoe-pass)], nearby => [qw(liverpool chester)],
     faq => [
       [ 'Do you cover the whole of the Wirral?', 'Yes: Birkenhead, Wallasey, Hoylake, West Kirby, Heswall, Bebington and Ellesmere Port.' ],
@@ -120,6 +128,7 @@ my @TOWNS = (
       [ 'Oulton Park, near Tarporley', 'The North West&rsquo;s main circuit for bike track days.' ],
     ],
     local => 'A lot of Cheshire riders head into Wales: the Horseshoe Pass, the A5, Snowdonia. If you break down over the border, we can still come out. Long runs are priced by distance, and you hear the price before we set off.',
+    local2 => 'Inside Chester&rsquo;s walls the streets are narrow and partly pedestrianised. Push the bike to the nearest road open to traffic if you can. For trips into North Wales on the A55 and up to the Horseshoe Pass, tell us the last junction number you passed.',
     roadlinks => [qw(horseshoe-pass)], nearby => [qw(wirral warrington liverpool)],
     faq => [
       [ 'Can you recover my bike from North Wales back to Chester?', 'Yes. Tell us where you are and we&rsquo;ll give you a price. Mid and north Wales are a regular run for us.' ],
@@ -135,6 +144,7 @@ my @TOWNS = (
       [ 'Longridge and Chipping roads', 'The route out to the Trough and the Ribble Valley.' ],
     ],
     local => 'Riders from Preston often head out through Longridge to the Trough of Bowland and Chipping, on gated, narrow roads with patchy signal. If the bike stops out there, make a note of the last village or cattle grid you passed. It&rsquo;s the quickest way for us to find you.',
+    local2 => 'Preston sits where the M6, M55, M61 and M65 come together, so a lot of our calls here are from the motorways rather than the city. A services car park or a slip road lay-by is the place to wait; never stand next to the live lane.',
     roadlinks => [qw(trough-of-bowland nick-of-pendle)], nearby => [qw(blackpool lancaster blackburn-burnley wigan)],
     faq => [
       [ 'Is there a motorbike recovery service based near Preston?', 'We send operators to Preston and the whole of Lancashire, around the clock. Call with your location for a price and arrival time.' ],
@@ -150,6 +160,7 @@ my @TOWNS = (
       [ 'Lytham and St Annes coast road', 'A popular summer ride.' ],
     ],
     local => 'Sitting in slow Illuminations traffic on the prom is hard on clutches and on air-cooled engines. Salt spray from the sea gets into electrics too. If a bike overheats in queues, let it cool before trying again, and don&rsquo;t open a hot radiator cap.',
+    local2 => 'During the Illuminations the Promenade is slow, packed and easy to get boxed in. If the bike gives up there, get it onto the pavement side and tell us the nearest tram stop; it&rsquo;s the quickest way for us to find you.',
     roadlinks => [], nearby => [qw(preston lancaster)],
     faq => [
       [ 'Can you collect my bike from a Blackpool hotel car park?', 'Yes. Tell us the hotel and where in the car park the bike is. Tight spaces are fine.' ],
@@ -165,8 +176,10 @@ my @TOWNS = (
       [ 'The Nick of Pendle, Sabden to Clitheroe', 'A steep climb over the shoulder of Pendle Hill.' ],
     ],
     local => 'On the A59 and the Ribble Valley lanes, mud and gravel on the road after farm traffic catch out plenty of riders. Low-speed drops on the Nick of Pendle hairpins are common too: a snapped lever or bent peg is enough to end the ride. We bring the bike home either way.',
+    local2 => 'Clitheroe, Whalley and the Ribble Valley villages are full of riders on summer weekends. If the bike stops outside a caf&eacute; or pub, ask if you can leave it in the car park while you wait, and give us the name of the place. On the M65 at night, junctions 8 to 10 are quiet and dark: wait behind the barrier.',
     roadlinks => [qw(nick-of-pendle trough-of-bowland)], nearby => [qw(preston bolton)],
     faq => [
+      [ 'Do you come out to Burnley and Nelson at night?', 'Yes, 24 hours a day. At night we give you a realistic arrival time on the call.' ],
       [ 'I dropped my bike on the Nick of Pendle and snapped a lever. Can you get me home?', 'Yes. Pull it off the road, send your location, and we&rsquo;ll recover it to your home or garage.' ],
     ],
   },
@@ -180,6 +193,7 @@ my @TOWNS = (
       [ 'Quernmore and the Trough road', 'The western end of the Trough of Bowland.' ],
     ],
     local => 'Heysham is a ferry port for the Isle of Man, so bikes break down here on their way to or from the TT and the Manx Grand Prix. Call with your sailing time. We&rsquo;ll get the bike fixed or home.',
+    local2 => 'From Lancaster, the Trough of Bowland and the roads up to Kirkby Lonsdale are a short ride away. On Morecambe&rsquo;s promenade, give us the nearest landmark, such as the Midland Hotel or the stone jetty, and we&rsquo;ll find you.',
     roadlinks => [qw(trough-of-bowland devils-bridge)], nearby => [qw(preston lake-district blackpool)],
     faq => [
       [ 'Can you get my bike to Heysham for the Isle of Man ferry?', 'Yes, as planned transport, or as a recovery if it breaks down on the way. Book transport early for TT week, as demand is high.' ],
@@ -195,6 +209,7 @@ my @TOWNS = (
       [ 'A66 Penrith to Keswick and A686 over Hartside', 'Long, fast and remote.' ],
     ],
     local => 'In the Lakes, distance is everything: a recovery from Hardknott to Kendal can take longer than you expect. Signal is patchy in the valleys. Get to a village, a pub or a road with a name if you can, and send your pin or what3words the moment you have a bar. The price reflects the distance, and you hear it before we set off.',
+    local2 => 'On Hardknott, Wrynose and the other steep passes, a recovery truck can&rsquo;t always get to where the bike stopped. We&rsquo;ll talk you through moving it to the nearest point a truck can reach, and we&rsquo;ll be honest about how long it takes to get there.',
     roadlinks => [qw(kirkstone-pass hardknott-pass devils-bridge hartside-pass)], nearby => [qw(lancaster)],
     faq => [
       [ 'Can you recover a motorbike from Hardknott Pass?', 'Yes, though access on the steepest sections can be very tight for a recovery truck. If you can, get the bike to the foot of the pass or a flatter section. We&rsquo;ll tell you where we can reach.' ],
@@ -289,6 +304,7 @@ for my $t (@TOWNS) {
   (my $np = $N) =~ s/&amp;/&/g;
   my $roads = join "\n", map { "  <li><strong>$_->[0]</strong>: $_->[1]</li>" } @{ $t->{roads} };
   my $nearby = join "\n", map { tlink($_) } @{ $t->{nearby} };
+  my $l2 = $t->{local2} ? "<p>$t->{local2}</p>\n" : '';
   my $rl = @{ $t->{roadlinks} } ? "<h2>Biker roads near $t->{short}</h2>\n<ul class=\"inline\">\n" . join("\n", map { rlink($_) } @{ $t->{roadlinks} }) . "\n</ul>\n" : '';
   push @main::PAGES, {
     path => "motorbike-recovery/$t->{slug}", kind => 'area', nav => 'motorbike-recovery', crumbs => [ [ 'Areas', 'motorbike-recovery' ] ],
@@ -308,7 +324,7 @@ $roads
 
 <h2>Local knowledge</h2>
 <p>$t->{local}</p>
-
+$l2
 <h2>What we do in $t->{short}</h2>
 <ul class="inline">
   <li><a href="/breakdown-recovery/">Breakdown recovery</a></li>
