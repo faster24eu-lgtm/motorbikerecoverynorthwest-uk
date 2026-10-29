@@ -311,7 +311,7 @@ for my $t (@TOWNS) {
     label => $N, card => $t->{county}, kicker => "$t->{short} &middot; 24/7",
     service => 'Motorcycle recovery', area => "$np, $t->{county}" =~ s/&amp;/&/gr,
     title => "Motorbike Recovery " . ($N =~ s/^The //r) . " 24/7 | Breakdown, Accident &amp; Transport",
-    description => "24/7 motorbike and scooter recovery in $n: breakdowns, accidents, stolen bikes and planned transport. Bike chocks and soft straps, price agreed before dispatch.",
+    description => "24/7 motorbike and scooter recovery in $n: breakdowns, accidents and transport. Bike chocks and soft straps, price agreed upfront.",
     h1 => "Motorbike recovery in $n",
     lead => "Breakdowns, crashes, stolen and found bikes, scooters and track bikes, recovered across $t->{county}, 24 hours a day.",
     body => <<"HTML",
