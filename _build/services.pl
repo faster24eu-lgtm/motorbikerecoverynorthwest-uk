@@ -142,6 +142,10 @@ HTML
 </ul>
 <p>We also run further afield: Cadwell, Donington, Brands, Knockhill. Just ask.</p>
 
+<h2>Circuit guides</h2>
+<p>Getting there, the paddock, and what happens if the bike goes in the gravel, circuit by circuit:</p>
+{{LIST:circuit}}
+
 <h2>How it works</h2>
 <ol class="steps">
   <li>Book a drop-off time that gets you to the circuit before sign-on and noise testing.</li>

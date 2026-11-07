@@ -69,8 +69,8 @@ my @TOWNS = (
     ],
   },
   {
-    slug => 'warrington', name => 'Warrington &amp; St Helens', county => 'Cheshire &amp; Merseyside', short => 'Warrington',
-    intro => 'Where the M6, M62 and M56 meet, Warrington is the crossroads of the North West. We cover Warrington, Newton-le-Willows, St Helens, Widnes and Runcorn, around the clock.',
+    slug => 'warrington', name => 'Warrington', county => 'Cheshire', short => 'Warrington',
+    intro => 'Where the M6, M62 and M56 meet, Warrington is the crossroads of the North West. We cover Warrington, Birchwood, Lymm, Culcheth and the motorway junctions around them, around the clock.',
     roads => [
       [ 'M6 Thelwall Viaduct and junctions 20 to 23', 'High, exposed and often windy. Big tourers get pushed around in a crosswind.' ],
       [ 'M62 junctions 7 to 11', 'Lots of lorries heading for the ports. Get well away from the lane.' ],
@@ -79,7 +79,7 @@ my @TOWNS = (
     ],
     local => 'Warrington&rsquo;s motorway junctions are a natural meeting point. If you&rsquo;ve stopped at a services car park on the M6 or M62, you&rsquo;re in the safest place to wait. Tell us which services and which end of the car park.',
     local2 => 'Riding between Widnes and Runcorn means crossing the Mersey Gateway or the Silver Jubilee Bridge. Both are fast, exposed roads with little room to stop. If you can, ride on to the far side before you pull over; if you&rsquo;re stuck on the bridge and in danger, call 999 first, then us. Around the Birchwood and Omega business parks we often pick up commuters&rsquo; bikes that won&rsquo;t start after work.',
-    roadlinks => [], nearby => [qw(wigan liverpool chester manchester)],
+    roadlinks => [], nearby => [qw(st-helens widnes-runcorn wigan altrincham)],
     faq => [
       [ 'Do you cover the Mersey Gateway and Runcorn?', 'Yes: Runcorn, Widnes and both bridges. If you stop on a bridge, only do so if it is safe; call 999 first if you are in danger.' ],
       [ 'Are you Motor Bike Recovery Northwest from Newton-le-Willows?', 'No. That was a separate local business that used this web address before. We&rsquo;re an independent recovery service covering the same area.' ],
@@ -295,10 +295,32 @@ my @ROADS = (
   },
 );
 
+# The original towns and roads above are "featured" (shown on the homepage).
+# More towns and roads live in towns2.pl and roads2.pl.
+$_->{featured} = 1 for @TOWNS, @ROADS;
+for my $f (qw(towns2.pl roads2.pl)) {
+  my $list = do "$FindBin::Bin/$f";
+  die "$f: $@" if $@;
+  die "$f: $!" unless ref $list;
+  push @{ $f eq 'towns2.pl' ? \@TOWNS : \@ROADS }, @$list;
+}
+
 my %T = map { $_->{slug} => $_ } @TOWNS;
 my %R = map { $_->{slug} => $_ } @ROADS;
-sub tlink { sprintf '<li><a href="/motorbike-recovery/%s/">%s</a></li>', $_[0], ucfirst($T{ $_[0] }{name}) }
-sub rlink { sprintf '<li><a href="/biker-roads/%s/">%s</a></li>', $_[0], $R{ $_[0] }{name} }
+sub tlink { die "unknown town $_[0]\n" unless $T{ $_[0] }; sprintf '<li><a href="/motorbike-recovery/%s/">%s</a></li>', $_[0], ucfirst($T{ $_[0] }{name}) }
+sub rlink { die "unknown road $_[0]\n" unless $R{ $_[0] }; sprintf '<li><a href="/biker-roads/%s/">%s</a></li>', $_[0], $R{ $_[0] }{name} }
+
+# Group for the areas page, from the county text.
+sub region_of {
+  my $c = shift;
+  return 'Greater Manchester' if $c =~ /Greater Manchester/;
+  return 'Cheshire' if $c =~ /Cheshire/;
+  return 'Merseyside' if $c =~ /Merseyside/;
+  return 'Lancashire' if $c =~ /Lancashire/;
+  return 'Cumbria' if $c =~ /Cumbria/;
+  return 'Peak District' if $c =~ /Derbyshire|Peak/;
+  die "no region for county '$c'\n";
+}
 
 for my $t (@TOWNS) {
   my $n = $t->{name};
@@ -311,6 +333,7 @@ for my $t (@TOWNS) {
   push @main::PAGES, {
     path => "motorbike-recovery/$t->{slug}", kind => 'area', nav => 'motorbike-recovery', crumbs => [ [ 'Areas', 'motorbike-recovery' ] ],
     label => $N, card => $t->{county}, kicker => "$t->{short} &middot; 24/7",
+    featured => $t->{featured}, region => region_of($t->{county}),
     service => 'Motorcycle recovery', area => "$np, $t->{county}" =~ s/&amp;/&/gr,
     title => fit_title("Motorbike Recovery " . ($N =~ s/^The //r) . " 24/7 | Breakdown &amp; Accident", "Motorbike Recovery " . ($N =~ s/^The //r) . " 24/7"),
     description => "24/7 motorbike and scooter recovery in $n: breakdowns, accidents and transport. Bike chocks and soft straps, price agreed upfront.",
@@ -356,6 +379,7 @@ for my $r (@ROADS) {
   push @main::PAGES, {
     path => "biker-roads/$r->{slug}", kind => 'road', nav => 'biker-roads', crumbs => [ [ 'Biker roads', 'biker-roads' ] ],
     label => $r->{name}, card => $r->{where}, kicker => "$r->{short} &middot; recovery",
+    featured => $r->{featured},
     service => 'Motorcycle recovery', area => plain_name("$r->{name}, $r->{where}"),
     title => fit_title("Broken Down on the $r->{name}? Motorbike Recovery 24/7", "Broken Down on the $r->{name}? Bike Recovery 24/7", "Broken Down on the " . ($r->{name} =~ s/,.*//r) . "? Motorbike Recovery 24/7"),
     description => "Broken down or dropped your bike on the $r->{name}? How to get found, where to wait, and 24/7 motorbike recovery home or to a garage.",

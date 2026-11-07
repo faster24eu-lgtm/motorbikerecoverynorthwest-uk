@@ -101,16 +101,18 @@ LD
 
 <p class="kicker">Where we go</p>
 <h2>Areas we cover</h2>
-{{LIST:area}}
+{{LIST:area!}}
+<p><a href="/motorbike-recovery/">See all the towns we cover</a></p>
 
 <p class="kicker">Biker roads</p>
 <h2>Broken down on a famous road?</h2>
 <p>The best roads in the North West are the furthest from help. Here&rsquo;s how to get found on each of them:</p>
-{{LIST:road}}
+{{LIST:road!}}
 
 <p class="kicker">Guides</p>
 <h2>Useful when things go wrong</h2>
-{{LIST:guide}}
+{{LIST:guide!}}
+<p><a href="/guides/">All rider guides</a></p>
 HTML
   faq => [
     [ 'Is there motorbike recovery near me right now?', 'If you&rsquo;re anywhere in Greater Manchester, Merseyside, Cheshire, Lancashire or Cumbria, yes, 24 hours a day. Call {{PHONE}} or send your location on WhatsApp and we&rsquo;ll find the nearest bike-equipped truck.' ],
@@ -130,7 +132,15 @@ HTML
   description => 'Every motorbike recovery and transport service across the North West: breakdowns, accidents, planned transport, track days, scooters and stolen bikes.',
   h1 => 'Recovery and transport for every kind of bike',
   lead => 'Pick the one that matches, or just call and tell us what&rsquo;s happened.',
-  body => "{{LIST:service}}\n",
+  body => <<'HTML',
+{{LIST:service}}
+
+<h2>By bike</h2>
+<p>Heavy tourers, trikes, Harleys, electric bikes and classics each need something different on the truck. See <a href="/bikes/">recovery by type of bike</a>.</p>
+
+<h2>On the motorway</h2>
+<p>Broken down on the M6, M60, M62 or another North West motorway? See <a href="/motorways/">motorway breakdowns</a> for what to do and where to wait.</p>
+HTML
 },
 
 {
@@ -140,7 +150,24 @@ HTML
   h1 => 'Every corner of the North West',
   lead => 'Cities, motorways, moors and passes. These are the areas we&rsquo;re called to most, each with its own local notes.',
   body => <<'HTML',
-{{LIST:area}}
+<h2>Greater Manchester</h2>
+{{LIST:area@Greater Manchester}}
+
+<h2>Merseyside</h2>
+{{LIST:area@Merseyside}}
+
+<h2>Cheshire</h2>
+{{LIST:area@Cheshire}}
+
+<h2>Lancashire</h2>
+{{LIST:area@Lancashire}}
+
+<h2>Cumbria and the Lakes</h2>
+{{LIST:area@Cumbria}}
+
+<h2>Peak District edge</h2>
+{{LIST:area@Peak District}}
+
 <p>Not listed? Call anyway. We cover the whole North West, plus North Wales, the Peak District and the Yorkshire Dales on request.</p>
 HTML
 },
@@ -164,7 +191,7 @@ HTML
 },
 
 {
-  path => 'guides/motorbike-recovery-cost', kind => 'guide', nav => 'guides', crumbs => $g, kicker => 'Prices',
+  path => 'guides/motorbike-recovery-cost', kind => 'guide', featured => 1, nav => 'guides', crumbs => $g, kicker => 'Prices',
   label => 'How much does motorbike recovery cost?', card => 'Real UK prices, and what pushes them up.',
   title => 'How Much Does Motorbike Recovery Cost in the UK? (2026 Prices)',
   description => 'What motorbike recovery costs in 2026: typical call-out fees, per-mile rates, night surcharges, and how to make sure the price you&rsquo;re quoted is what you pay.',
@@ -204,7 +231,7 @@ HTML
 },
 
 {
-  path => 'guides/after-a-motorbike-crash', kind => 'guide', nav => 'guides', crumbs => $g, kicker => 'After a crash',
+  path => 'guides/after-a-motorbike-crash', kind => 'guide', featured => 1, nav => 'guides', crumbs => $g, kicker => 'After a crash',
   label => 'What to do after a motorbike crash', card => 'Step-by-step, from the roadside to the claim.',
   title => 'What to Do After a Motorbike Accident in the UK: Step by Step',
   description => 'Had a motorbike accident or been knocked off? What to do at the scene, your legal duties, the bike, your insurer, a replacement bike and claims in the UK.',
@@ -254,7 +281,7 @@ HTML
 },
 
 {
-  path => 'guides/how-to-strap-down-a-motorbike', kind => 'guide', nav => 'guides', crumbs => $g, kicker => 'Transport',
+  path => 'guides/how-to-strap-down-a-motorbike', kind => 'guide', featured => 1, nav => 'guides', crumbs => $g, kicker => 'Transport',
   label => 'How a motorbike should be strapped down', card => 'What a good recovery operator does, and what to watch for.',
   title => 'How to Strap Down a Motorbike for Transport Without Damage',
   description => 'How to secure a motorbike on a trailer or truck: wheel chocks, soft loops, strap angles, fork compression, and the mistakes that bend bars and crack fairings.',
@@ -281,7 +308,7 @@ HTML
 },
 
 {
-  path => 'guides/motorbike-wont-start', kind => 'guide', nav => 'guides', crumbs => $g, kicker => 'Won&rsquo;t start',
+  path => 'guides/motorbike-wont-start', kind => 'guide', featured => 1, nav => 'guides', crumbs => $g, kicker => 'Won&rsquo;t start',
   label => 'Motorbike won&rsquo;t start? Check these first', card => 'Kill switch, side stand, clutch and fuel: the free fixes.',
   title => 'Motorbike Won&rsquo;t Start? 9 Checks Before You Call Recovery',
   description => 'Motorbike won&rsquo;t start? Check the kill switch, side stand, clutch switch, neutral, fuel, battery, fuses and immobiliser first. What each symptom means.',

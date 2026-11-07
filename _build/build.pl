@@ -29,7 +29,7 @@ our $YEAR       = (localtime)[5] + 1900;
 my $ROOT = dirname($Bin);
 our @PAGES;
 
-for my $f (qw(services.pl places.pl pages.pl)) {
+for my $f (qw(services.pl places.pl pages.pl more.pl)) {
   my $r = do "$Bin/$f";
   die "$f: $@" if $@;
   die "$f: $!" unless defined $r;
@@ -49,13 +49,19 @@ sub fill {
   $s =~ s/\{\{PHONE\}\}/$PHONE/g;
   $s =~ s/\{\{PHONE_HREF\}\}/$PHONE_HREF/g;
   $s =~ s/\{\{WA_HREF\}\}/$WA_HREF/g;
-  $s =~ s/\{\{LIST:(\w+)\}\}/link_list($1)/ge;
+  $s =~ s/\{\{LIST:(\w+)([@!][^}]*)?\}\}/link_list($1, $2)/ge;
   $s;
 }
 
+# {{LIST:kind}} all pages of a kind; {{LIST:kind!}} only featured ones;
+# {{LIST:kind@Region}} only pages whose region matches.
 sub link_list {
-  my $kind = shift;
+  my ($kind, $mod) = @_;
+  $mod //= '';
   my @p = grep { ($_->{kind} // '') eq $kind } @PAGES;
+  @p = grep { $_->{featured} } @p if $mod eq '!';
+  if ($mod =~ /^@(.+)/) { my $r = $1; @p = grep { ($_->{region} // '') eq $r } @p }
+  die "LIST:$kind$mod matched no pages\n" unless @p;
   my $h = qq(<ul class="cards">\n);
   for (@p) {
     $h .= sprintf qq(  <li><a href="%s"><strong>%s</strong><span>%s</span></a></li>\n), href($_->{path}), $_->{label}, $_->{card} // '';

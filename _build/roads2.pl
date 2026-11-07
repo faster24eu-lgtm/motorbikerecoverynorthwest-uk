@@ -1,0 +1,61 @@
+use utf8;
+# More biker road pages (added 2026-11-08). Same fields as @ROADS in places.pl.
+[
+  {
+    slug => 'shap', name => 'Shap Summit (A6)', short => 'Shap', where => 'Kendal to Penrith, Cumbria',
+    intro => 'Before the M6 was built, the A6 over Shap was the main road to Scotland. Now it&rsquo;s one of the best quiet rides in Cumbria: long, fast, high and empty, with the summit at around 425 metres.',
+    about => 'From Kendal the A6 climbs steadily past Huck&rsquo;s Brow and over open fell to the summit, then drops through Shap village to Penrith. There&rsquo;s a memorial at the top to the drivers and road workers who kept the old road open in winter. The M6 runs close by, but the A6 has little traffic, few houses and long stretches with no shelter at all.',
+    trouble => 'Bikes running out of fuel (there&rsquo;s little on the road between Kendal and Penrith), electrical problems in heavy rain, crosswinds on the open fell, and riders caught out by snow and ice on the summit in winter, when the valleys are clear.',
+    safe => 'Pull right off into one of the wide verges or lay-bys, well away from the carriageway. Traffic is light but fast. Tell us whether you&rsquo;re on the Kendal side or the Shap village side of the summit, and send a pin when you have signal.',
+    towns => [qw(kendal penrith)],
+  },
+  {
+    slug => 'honister-pass', name => 'Honister Pass (B5289)', short => 'Honister', where => 'Borrowdale to Buttermere, Lake District',
+    intro => 'Honister climbs out of Borrowdale to the slate mine at the summit, about 355 metres up, then drops steeply to Buttermere. Gradients reach 1 in 4, and the road is narrow, busy and unforgiving.',
+    about => 'From Seatoller the road climbs hard on tight bends to the Honister Slate Mine, then runs down the long, steep descent to Gatesgarth and Buttermere. Walkers, cyclists, cars and coaches all share a single narrow lane in places. It&rsquo;s spectacular, but it punishes clutches, brakes and anyone not used to steep hills.',
+    trouble => 'Clutches burnt out on the Seatoller climb, brakes fading on the Buttermere descent, low-speed drops on the steepest bends when a rider stalls or loses balance, and bikes stopping on the climb in summer traffic.',
+    safe => 'The slate mine car park at the top is the safest place to stop and the easiest place for a truck to load. If you stop on the climb, get the bike right in to the side and use your hazard lights. Tell us whether you&rsquo;re on the Borrowdale or the Buttermere side.',
+    extra => [ 'Can a recovery truck get up Honister?', '<p>Yes, but slowly, and not always to every spot. On the steepest bends there&rsquo;s nowhere for a truck to stop safely and load a bike. If the bike rolls, we may ask you to coast it down to a wider place, the summit car park, or the valley floor at Seatoller or Gatesgarth. We&rsquo;ll tell you honestly on the call.</p>' ],
+    towns => [qw(keswick workington-whitehaven lake-district)],
+  },
+  {
+    slug => 'whinlatter-pass', name => 'Whinlatter Pass (B5292)', short => 'Whinlatter', where => 'Braithwaite to Lorton, Lake District',
+    intro => 'Whinlatter is the gentlest of the northern Lakeland passes: a wooded climb from Braithwaite through Whinlatter Forest to a summit of about 320 metres, then down to Lorton and Cockermouth.',
+    about => 'It&rsquo;s a quicker, easier road than Honister or Newlands, with a good surface and long bends through the trees. The forest visitor centre near the top is busy with walkers and mountain bikers. Under the trees the road stays damp and leafy long after rain.',
+    trouble => 'Slides on damp, leafy bends under the trees, punctures from forestry gravel, and bikes that won&rsquo;t restart in the visitor centre car park.',
+    safe => 'The Whinlatter Forest visitor centre car park is the best place to wait and to load. On the climb, there are a few lay-bys; use one rather than the verge. Tell us whether you&rsquo;re nearer Braithwaite or Lorton.',
+    towns => [qw(keswick workington-whitehaven)],
+  },
+  {
+    slug => 'newlands-pass', name => 'Newlands Pass', short => 'Newlands', where => 'Braithwaite to Buttermere, Lake District',
+    intro => 'Newlands runs from Braithwaite up the Newlands valley to Newlands Hause, about 330 metres up, then drops steeply to Buttermere. It&rsquo;s narrow, open and very steep in places.',
+    about => 'The road climbs gently through the valley at first, then steepens to 1 in 4 near the top, with a sheer drop on one side. At the hause there&rsquo;s a small car park by Moss Force waterfall. The descent to Buttermere is steep and twisting. There are no barriers, and very few passing places.',
+    trouble => 'Clutches and brakes overworked on the steep sections, stalls and low-speed drops near the hause, and bikes getting stuck behind slow cars on the climb.',
+    safe => 'The car park at Newlands Hause is the safest place to stop. Elsewhere, get the bike tight to the side. A recovery truck can&rsquo;t always reach the steepest sections, so tell us exactly where you are, and whether you&rsquo;re on the Braithwaite or the Buttermere side.',
+    towns => [qw(keswick lake-district)],
+  },
+  {
+    slug => 'holme-moss', name => 'Holme Moss (A6024)', short => 'Holme Moss', where => 'Longdendale to Holmfirth, Peak District',
+    intro => 'The A6024 climbs from the Woodhead road in Longdendale over Holme Moss, more than 500 metres up, and drops to Holmfirth. It&rsquo;s best known for the TV mast at the top and for the Tour de France climb of 2014.',
+    about => 'From the Woodhead Pass the road zigzags up a steep hillside onto the open moor, past the transmitter mast, and then runs down a long descent into the Holme Valley. It&rsquo;s high, empty and exposed, and closes in snow. Cyclists use it heavily at weekends.',
+    trouble => 'Overheating on the steep climb from Longdendale, crosswinds and fog on top, and riders caught by ice or snow when it&rsquo;s clear in Glossop and Manchester.',
+    safe => 'There are a few lay-bys near the top; use one rather than the narrow verge. Signal can be patchy on the north side. Tell us whether you&rsquo;re on the Woodhead or the Holmfirth side of the mast, and send a pin when you can.',
+    towns => [qw(glossop ashton-under-lyne oldham)],
+  },
+  {
+    slug => 'saddleworth-moor', name => 'Saddleworth Moor (A635)', short => 'Saddleworth Moor', where => 'Greenfield to Holmfirth, Pennines',
+    intro => 'The A635 climbs out of Greenfield, past Dove Stone, and over Saddleworth Moor to Holmfirth. It&rsquo;s a fast, sweeping moorland road, and one of the quickest ways between Greater Manchester and West Yorkshire.',
+    about => 'Once you&rsquo;re past the reservoirs, it&rsquo;s open moor for miles, with long bends, dips and very few buildings. The road has a bad accident record, and the weather changes quickly on top: fog and rain can come in with little warning. In winter it closes in snow.',
+    trouble => 'Crashes on the fast bends, overheating on the climb from Greenfield on summer weekends, and bikes stopping in heavy rain with no shelter for miles.',
+    safe => 'Use one of the lay-bys and get well away from the road; traffic is fast. Tell us whether you&rsquo;re nearer Greenfield or Holmfirth. If you&rsquo;ve crashed and anyone is hurt, call 999 first.',
+    towns => [qw(oldham ashton-under-lyne)],
+  },
+  {
+    slug => 'lune-valley', name => 'Lune Valley (A683)', short => 'Lune Valley', where => 'Lancaster to Kirkby Lonsdale and Sedbergh',
+    intro => 'The A683 follows the River Lune from Lancaster through Caton and Hornby to Kirkby Lonsdale, then on to Sedbergh. Sweeping bends, valley views and a classic stop at Devil&rsquo;s Bridge.',
+    about => 'It&rsquo;s a fast, flowing road with good sightlines in places and blind bends and farm entrances in others. Tractors and farm traffic leave mud on the road, especially after rain. North of Kirkby Lonsdale it gets narrower and quieter towards Sedbergh and the Howgills.',
+    trouble => 'Low-speed drops on mud and gravel at farm entrances, overtaking crashes on the faster stretches, and bikes that won&rsquo;t restart after a stop at Devil&rsquo;s Bridge or Kirkby Lonsdale.',
+    safe => 'Pull into a village or a lay-by rather than stopping on a bend. Tell us the nearest village: Caton, Hornby, Kirkby Lonsdale or Sedbergh. It tells the truck which way to come in.',
+    towns => [qw(lancaster kendal)],
+  },
+];
