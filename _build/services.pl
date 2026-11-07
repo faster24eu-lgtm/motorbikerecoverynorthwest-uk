@@ -34,7 +34,7 @@ push @main::PAGES,
 <ol class="steps">
   <li><strong>Call or WhatsApp your location.</strong> A live location pin, a what3words address or the nearest junction or lay-by.</li>
   <li><strong>Tell us the bike and the problem.</strong> Make, model and roughly what happened. It decides whether a roadside fix is worth trying.</li>
-  <li><strong>Get the full price.</strong> Local recoveries start {{PRICE}}. You hear the total before anyone is sent.</li>
+  <li><strong>Get the full price.</strong> You hear the total on the call and agree it before anyone is sent.</li>
   <li><strong>Bike loaded properly.</strong> Front wheel into a chock, soft loops on the bars or yokes, ratchet straps pulling down and forward. No straps over the seat, tank or fairings.</li>
   <li><strong>Taken where you choose.</strong> Home, your dealer, an independent bike garage, or a lock-up. In most cases the rider rides along in the cab.</li>
 </ol>
@@ -162,9 +162,9 @@ HTML
   label => 'Scooter &amp; moped recovery', card => '125s, delivery scooters, mopeds, e-scooters and mobility scooters.',
   kicker => 'Scooters &amp; mopeds', service => 'Scooter and moped recovery',
   title => 'Scooter &amp; Moped Recovery Manchester, Liverpool &amp; North West | 24/7',
-  description => 'Scooter, moped and 125 recovery across the North West, 24/7. Delivery riders, commuters and learner bikes, plus mobility scooter collection. Fast, careful, fixed price.',
+  description => 'Scooter, moped and 125 recovery across the North West, 24/7. Delivery riders, commuters and learner bikes, plus mobility scooter collection. Price agreed before we set off.',
   h1 => 'Scooter or moped stuck? Back on the road fast.',
-  lead => 'If your 125 earns your living, every hour off the road costs you money. We get scooters and mopeds to a garage, a dealer or home, quickly and cheaply.',
+  lead => 'If your 125 earns your living, every hour off the road costs you money. We get scooters and mopeds to a garage, a dealer or home, quickly.',
   body => <<'HTML',
 <h2>For delivery riders</h2>
 <p>Most of our city scooter calls in Manchester and Liverpool are delivery riders: a seized engine after high mileage, a snapped drive belt, a flat battery or a puncture. We take the scooter to the place that can fix it today. Some riders keep a cheap spare scooter at home and swap. We can bring that one back on the same trip.</p>

@@ -7,8 +7,8 @@ push @main::PAGES,
 {
   path => '', label => 'Home', kicker => '24/7 &middot; North West England',
   service => 'Motorcycle recovery',
-  title => 'Motorbike Recovery North West 24/7 | Manchester, Liverpool, Lancashire, Cumbria',
-  description => '24/7 motorbike and scooter recovery across the North West: Manchester, Liverpool, Lancashire, Cheshire and Cumbria. Breakdowns, accidents, track days and transport. No membership, price agreed first.',
+  title => 'Motorbike Recovery North West 24/7 | Bike Rescue, No Membership',
+  description => '24/7 motorbike, scooter and moped recovery across Manchester, Liverpool, Lancashire, Cheshire and Cumbria. No membership. Price agreed before we set off.',
   h1 => 'Motorbike recovery across the North West',
   lead => 'Broken down on the M6, dropped it on the Cat and Fiddle, or need a track bike at Oulton Park by 8&nbsp;am? Call, hear the price, and a bike-ready truck comes to you. No membership.',
   schema => <<'LD',
@@ -22,6 +22,9 @@ push @main::PAGES,
 </script>
 LD
   body => <<'HTML',
+<p>Bike Rescue North West is a 24/7 recovery line just for motorbikes, scooters and mopeds. One call reaches a network of bike-equipped recovery trucks across Greater Manchester, Merseyside, Cheshire, Lancashire and Cumbria. There&rsquo;s no membership and no subscription: you pay for the one recovery you need, at a price you agree before the truck sets off.</p>
+<p>Most calls are simple: a flat battery in a car park, a puncture on the M6, a clutch cable that snapped on the way to work. Some aren&rsquo;t: a bike in a ditch on the Trough of Bowland, a track bike at Oulton Park with no plates, or a stolen scooter the police have just found with a broken ignition. Every one of them needs a driver who knows how to load a bike without damaging it, and that&rsquo;s the only kind we send.</p>
+
 <p class="kicker">What we do</p>
 <h2>Every way a bike ends up on a truck</h2>
 {{LIST:service}}
@@ -30,7 +33,7 @@ LD
 <h2>Four steps, no membership</h2>
 <ol class="steps">
   <li><strong>Send your location.</strong> A WhatsApp pin, what3words or the nearest junction or lay-by.</li>
-  <li><strong>Hear the full price.</strong> Local recoveries start {{PRICE}}. Nothing is booked until you say yes.</li>
+  <li><strong>Hear the full price.</strong> You get the price on the call, agreed before anyone sets off. Nothing is booked until you say yes.</li>
   <li><strong>A bike-ready truck comes out.</strong> Wheel chock, soft loops and proper ratchet straps. We text you the operator&rsquo;s details.</li>
   <li><strong>Bike delivered where you choose.</strong> Home, dealer, garage, track or storage, and usually you ride along in the cab.</li>
 </ol>
@@ -42,6 +45,27 @@ LD
   <li><strong>The price comes first.</strong> You hear it before we send anyone. See <a href="/guides/motorbike-recovery-cost/">what recovery costs</a>.</li>
   <li><strong>Every bike.</strong> Superbikes, tourers, adventure bikes, Harleys, scooters, classics, trikes and electric bikes.</li>
   <li><strong>The whole North West.</strong> Cities, motorways, and the moorland and Lakeland roads where help is hardest to find.</li>
+</ul>
+
+<p class="kicker">Near you</p>
+<h2>Motorbike recovery near you, anywhere in the North West</h2>
+<p>Searching for motorbike recovery near you from a lay-by? Send your location and we look for the nearest truck that carries bike kit, not just the nearest truck. This is where most of our calls come from:</p>
+<ul class="duo">
+  <li><strong>Greater Manchester.</strong> The M60, M62 and M61, city-centre bike bays, and the A6 and A57 out to the Peak. See <a href="/motorbike-recovery/manchester/">Manchester</a>, <a href="/motorbike-recovery/stockport/">Stockport</a>, <a href="/motorbike-recovery/bolton/">Bolton</a> and <a href="/motorbike-recovery/wigan/">Wigan</a>.</li>
+  <li><strong>Merseyside and Cheshire.</strong> Liverpool, the Mersey tunnels and the Isle of Man ferry, the Wirral coast, Warrington&rsquo;s motorway junctions, and Chester and the A55 into North Wales.</li>
+  <li><strong>Lancashire.</strong> The M6, M55 and M65, Preston, Blackpool seafront, Blackburn and Burnley, Lancaster and the Trough of Bowland.</li>
+  <li><strong>Cumbria and the Lakes.</strong> Kendal, Windermere, Keswick and the passes: Kirkstone, Hardknott and Hartside. Remote roads, so allow more time.</li>
+</ul>
+<p>How long you wait depends on where you are and the time of day. In the cities it&rsquo;s typically 30 to 60 minutes; on a fell pass at night it&rsquo;s longer. You get an honest estimate on the call, and if we can&rsquo;t reach you in reasonable time, we tell you so you can make other plans.</p>
+
+<p class="kicker">On the phone</p>
+<h2>What to have ready when you call</h2>
+<ul>
+  <li><strong>Where the bike is</strong>: a WhatsApp location pin, a what3words address, or the road and the nearest junction, lay-by or landmark.</li>
+  <li><strong>The bike</strong>: make, model and roughly how heavy it is. Big tourers, trikes and Harleys may need a bigger bed.</li>
+  <li><strong>What happened</strong>: won&rsquo;t start, puncture, crash, stolen and found, or it just needs moving.</li>
+  <li><strong>Whether it rolls and steers</strong>, and where the keys are.</li>
+  <li><strong>Where it should go</strong>: home, a dealer, a garage, storage or a track.</li>
 </ul>
 
 <p class="kicker">Where we go</p>
@@ -58,10 +82,14 @@ LD
 {{LIST:guide}}
 HTML
   faq => [
-    [ 'How much does motorbike recovery cost in the North West?', 'Local recoveries start {{PRICE}}. Longer distances, night calls and difficult recoveries (a crashed bike, a remote pass) cost more. You always hear the full price before anyone is sent.' ],
+    [ 'Is there motorbike recovery near me right now?', 'If you&rsquo;re anywhere in Greater Manchester, Merseyside, Cheshire, Lancashire or Cumbria, yes, 24 hours a day. Call {{PHONE}} or send your location on WhatsApp and we&rsquo;ll find the nearest bike-equipped truck.' ],
+    [ 'How much does motorbike recovery cost in the North West?', 'It depends on distance, the time of day or night and how easy the bike is to load. A crashed bike or a remote pass takes more work. You hear the full price on the call and agree it before anyone sets off.' ],
     [ 'Do I need breakdown cover?', 'No. There&rsquo;s no membership: you pay for this recovery only.' ],
+    [ 'Do you recover mopeds, scooters and 125s?', 'Yes. Mopeds, 50cc and 125 scooters, learner bikes, delivery scooters and maxi-scooters, as well as big bikes, trikes and electric motorbikes.' ],
+    [ 'Can you collect a crashed motorbike?', 'Yes. A crashed bike that won&rsquo;t roll or steer can still be loaded safely. Once the police are finished at the scene, call us and tell us what&rsquo;s damaged.' ],
     [ 'How will my bike be secured?', 'Front wheel in a chock, soft loops around the bars, yokes or frame, and ratchet straps pulling down and forward. Nothing goes across the tank, seat or fairings.' ],
     [ 'Can you take me as well as the bike?', 'Usually, yes. Most trucks have room for the rider, often a pillion too. Tell us when you call.' ],
+    [ 'Are you Motor Bike Recovery Northwest of Newton-le-Willows?', 'No. That was a separate business that used this web address before. We&rsquo;re an independent 24/7 motorbike recovery service covering the North West, and we&rsquo;re not connected with them.' ],
   ],
 },
 
@@ -120,7 +148,7 @@ HTML
   <tr><td>Short local recovery (under 10 miles)</td><td>about &pound;80 &ndash; &pound;150</td></tr>
   <tr><td>Night, weekend and bank holiday</td><td>usually a surcharge on top</td></tr>
 </table></div>
-<p>These are market ranges from published UK price lists, not our price list. With us, local recoveries start {{PRICE}}, and you always get the full figure before anyone is sent.</p>
+<p>These are market ranges from published UK price lists, not our price list. With us, you get the full figure on the call and agree it before anyone is sent.</p>
 
 <h2>What pushes the price up</h2>
 <ul>
@@ -147,9 +175,9 @@ HTML
 {
   path => 'guides/after-a-motorbike-crash', kind => 'guide', nav => 'guides', crumbs => $g, kicker => 'After a crash',
   label => 'What to do after a motorbike crash', card => 'Step-by-step, from the roadside to the claim.',
-  title => 'What to Do After a Motorbike Accident: A Rider&rsquo;s Checklist',
-  description => 'A clear checklist for after a motorbike crash: safety, injuries, the police, evidence, the other party, recovering the bike and starting an insurance claim.',
-  h1 => 'Come off? Here&rsquo;s what to do, in order.',
+  title => 'What to Do After a Motorbike Accident in the UK: Step by Step',
+  description => 'Had a motorbike accident or been knocked off? What to do at the scene, your legal duties, the bike, your insurer, a replacement bike and claims in the UK.',
+  h1 => 'Had a motorbike accident? What to do, in order.',
   lead => 'Adrenaline hides injuries and scrambles memory. Work through this list, and leave the bike for last.',
   body => <<'HTML',
 <ol class="steps">
@@ -163,9 +191,35 @@ HTML
   <li><strong>Get checked by a doctor</strong> within a day or two, even if you feel fine. Some injuries show up later.</li>
 </ol>
 
+<h2>What the law says you must do</h2>
+<p>If you&rsquo;re involved in a collision on a road in Great Britain that injures someone, or damages another vehicle or someone&rsquo;s property, you must stop. Anyone with reasonable grounds can ask for your name and address, the bike owner&rsquo;s name and address, and the registration, and you must give them. If someone is injured, you must also show your insurance.</p>
+<p>If you can&rsquo;t exchange details at the scene, for example because the other driver has gone or the owner of a damaged parked car can&rsquo;t be found, report the accident to the police as soon as you reasonably can, and within 24 hours at the latest.</p>
+
+<h2>Knocked off by a car?</h2>
+<p>Many bike crashes happen at junctions, when a driver pulls out or turns across a rider they didn&rsquo;t see. Don&rsquo;t argue about blame at the roadside, and don&rsquo;t apologise in a way that sounds like admitting fault. Just collect the facts: where the car was, whether it was signalling, the speed limit, the weather and the road surface. Ask witnesses for a phone number before they drive off, because they&rsquo;re hard to find later. If it was a company van, photograph the livery and any fleet number.</p>
+
+<h2>What happens to your bike</h2>
+<p>If the police close the road, they may call their own contracted recovery firm. A bike they remove goes to a storage yard, and yards charge for every day it stays there, so arrange collection quickly. If you&rsquo;re free to choose, decide where it should go: your home, a dealer, a bodyshop your insurer approves, or secure storage. We can collect it from the roadside or from the yard. See <a href="/accident-recovery/">accident recovery</a>.</p>
+<p>Don&rsquo;t ride a crashed bike home, even if it starts. Bent bars, twisted forks or a cracked lever can fail at the next corner. Photograph the bike before it&rsquo;s moved, and again once it&rsquo;s off the truck.</p>
+
+<h2>Your insurer, a replacement bike and a claim</h2>
+<ul>
+  <li><strong>Tell your own insurer</strong> promptly, even if it wasn&rsquo;t your fault and you don&rsquo;t plan to claim on your policy. Most policies require it.</li>
+  <li><strong>Replacement bike.</strong> If the other driver was at fault, you may be able to get a similar bike while yours is off the road, through their insurer or a credit hire company. Read the agreement before you sign: some leave you paying for the hire if the claim fails.</li>
+  <li><strong>Injury claims.</strong> In England and Wales you normally have three years from the date of the accident to start an injury claim. The 2021 whiplash rules that cap small road-traffic injury claims don&rsquo;t apply to motorcyclists or pillion passengers.</li>
+  <li><strong>Keep everything</strong>: damaged kit, receipts, medical notes, time off work and travel costs to appointments.</li>
+</ul>
+<p>This is general information, not legal advice. For an injury claim, speak to a solicitor who handles motorcycle cases.</p>
+
 <h2>Your kit</h2>
 <p>A helmet that has taken a hit should be replaced, even if it looks fine. Keep damaged kit and photograph it, because it&rsquo;s part of your claim.</p>
 HTML
+  faq => [
+    [ 'Should I take my helmet off after a motorbike accident?', 'Not if you have any neck or back pain, numbness or tingling, or you were knocked out. Leave it on and let paramedics remove it. If you&rsquo;re unhurt you can take it off, but keep it: a helmet that has taken a hit should be replaced.' ],
+    [ 'Do I have to report a motorbike accident to the police?', 'You must report it within 24 hours if you couldn&rsquo;t exchange details at the scene, or if someone was injured and you couldn&rsquo;t show your insurance there and then. Call 999 straight away if anyone is hurt, the road is blocked, or a driver leaves the scene.' ],
+    [ 'Can I ride my bike home after a crash?', 'Only if you&rsquo;re unhurt and you&rsquo;ve checked the bike properly: bars straight, forks not twisted, brakes and levers working, and no fuel or oil leaking. If in doubt, get it recovered.' ],
+    [ 'How long do I have to claim after a motorbike accident?', 'In England and Wales, usually three years from the date of the accident for an injury claim. Don&rsquo;t leave it that long: evidence and witnesses are much easier to find early on.' ],
+  ],
 },
 
 {

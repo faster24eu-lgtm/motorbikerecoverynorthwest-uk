@@ -24,7 +24,6 @@ our $PHONE_HREF = 'tel:+447520639867';
 our $PHONE      = '07520 639867';
 our $WA_HREF    = 'https://wa.me/447988974609?text=Hi%2C%20I%20need%20motorbike%20recovery.%20My%20location%20is%3A%20';
 our $FORM_TO    = 'faster24eu@gmail.com';    # formsubmit.co recipient
-our $PRICE      = 'from &pound;125';
 our $YEAR       = (localtime)[5] + 1900;
 
 my $ROOT = dirname($Bin);
@@ -50,7 +49,6 @@ sub fill {
   $s =~ s/\{\{PHONE\}\}/$PHONE/g;
   $s =~ s/\{\{PHONE_HREF\}\}/$PHONE_HREF/g;
   $s =~ s/\{\{WA_HREF\}\}/$WA_HREF/g;
-  $s =~ s/\{\{PRICE\}\}/$PRICE/g;
   $s =~ s/\{\{LIST:(\w+)\}\}/link_list($1)/ge;
   $s;
 }
