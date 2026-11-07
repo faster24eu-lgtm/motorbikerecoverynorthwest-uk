@@ -176,7 +176,7 @@ my @TOWNS = (
       [ 'The Nick of Pendle, Sabden to Clitheroe', 'A steep climb over the shoulder of Pendle Hill.' ],
     ],
     local => 'On the A59 and the Ribble Valley lanes, mud and gravel on the road after farm traffic catch out plenty of riders. Low-speed drops on the Nick of Pendle hairpins are common too: a snapped lever or bent peg is enough to end the ride. We bring the bike home either way.',
-    local2 => 'Clitheroe, Whalley and the Ribble Valley villages are full of riders on summer weekends. If the bike stops outside a caf&eacute; or pub, ask if you can leave it in the car park while you wait, and give us the name of the place. On the M65 at night, junctions 8 to 10 are quiet and dark: wait behind the barrier.',
+    local2 => 'Clitheroe, Whalley and the Ribble Valley villages are full of riders on summer weekends. If the bike stops outside a caf&eacute; or pub, ask if you can leave it in the car park while you wait, and give us the name of the place. On the M65 at night, junctions 8 to 10 are quiet and dark: wait behind the barrier. Looking for a motorbike MOT, service or garage in Burnley or Blackburn? We don&rsquo;t do repairs, but we can take a bike that can&rsquo;t be ridden to the garage you choose and bring it back: see <a href="/guides/motorbike-mot-and-service-collection/">getting a bike to its MOT or service</a>.',
     roadlinks => [qw(nick-of-pendle trough-of-bowland)], nearby => [qw(preston bolton)],
     faq => [
       [ 'Do you come out to Burnley and Nelson at night?', 'Yes, 24 hours a day. At night we give you a realistic arrival time on the call.' ],
@@ -359,7 +359,7 @@ $l2
   <li><a href="/scooter-recovery/">Scooters &amp; mopeds</a></li>
   <li><a href="/stolen-motorbike-recovery/">Stolen bike collection</a></li>
 </ul>
-<p>Been in a crash around $t->{short}? Read <a href="/guides/after-a-motorbike-crash/">what to do after a motorbike accident</a>, step by step, from the roadside to the claim.</p>
+<p>Been in a crash around $t->{short}? Read <a href="/guides/after-a-motorbike-crash/">what to do after a motorbike accident</a>, step by step. Planning a motorbike accident claim in $t->{short}? We&rsquo;re not solicitors, but the recovery is part of the evidence: see <a href="/guides/motorbike-accident-claim/">what you need from the recovery for a claim</a>.</p>
 
 <h2>Price</h2>
 <p>The price for a recovery around $t->{short} depends on distance, the time of day or night and how easy the bike is to load. You hear it in full on the call and agree it before anyone sets off. See <a href="/guides/motorbike-recovery-cost/">what motorbike recovery costs</a>.</p>

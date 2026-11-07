@@ -7,9 +7,9 @@ push @main::PAGES,
 {
   path => '', label => 'Home', kicker => '24/7 &middot; North West England',
   service => 'Motorcycle recovery',
-  title => 'Motorbike Recovery North West 24/7 | Bike Rescue, No Membership',
+  title => q(Motorbike Rescue &amp; Recovery North West 24/7 | No Membership),
   description => '24/7 motorbike, scooter and moped recovery across Manchester, Liverpool, Lancashire, Cheshire and Cumbria. No membership. Price agreed before we set off.',
-  h1 => 'Motorbike recovery across the North West',
+  h1 => q(Motorbike rescue and recovery across the North West),
   lead => 'Broken down on the M6, dropped it on the Cat and Fiddle, or need a track bike at Oulton Park by 8&nbsp;am? Call, hear the price, and a bike-ready truck comes to you. No membership.',
   schema => <<'LD',
 <script type="application/ld+json">
@@ -267,7 +267,11 @@ HTML
   <li><strong>Injury claims.</strong> In England and Wales you normally have three years from the date of the accident to start an injury claim. The 2021 whiplash rules that cap small road-traffic injury claims don&rsquo;t apply to motorcyclists or pillion passengers.</li>
   <li><strong>Keep everything</strong>: damaged kit, receipts, medical notes, time off work and travel costs to appointments.</li>
 </ul>
-<p>This is general information, not legal advice. For an injury claim, speak to a solicitor who handles motorcycle cases.</p>
+<p>This is general information, not legal advice. For an injury claim, speak to a solicitor who handles motorcycle cases. See also <a href="/guides/motorbike-accident-claim/">what you need from the recovery for a claim</a>.</p>
+
+<h2>Injured? Medical checks and the medical report</h2>
+<p>Riders often feel fine at the roadside and stiff, bruised or worse the next day. Get checked at A&amp;E, an urgent treatment centre or your GP within a day or two, and tell them you came off a motorbike. Ask for your injuries to be written in your notes. If you make an injury claim, an independent medical expert will usually examine you and write a medical report; your own records from the first days after the accident make that report far more accurate.</p>
+<p>Keep a simple diary: pain, sleep, missed work, things you couldn&rsquo;t do. It takes a minute a day and is hard to recreate months later.</p>
 
 <h2>Your kit</h2>
 <p>A helmet that has taken a hit should be replaced, even if it looks fine. Keep damaged kit and photograph it, because it&rsquo;s part of your claim.</p>
@@ -277,6 +281,8 @@ HTML
     [ 'Do I have to report a motorbike accident to the police?', 'You must report it within 24 hours if you couldn&rsquo;t exchange details at the scene, or if someone was injured and you couldn&rsquo;t show your insurance there and then. Call 999 straight away if anyone is hurt, the road is blocked, or a driver leaves the scene.' ],
     [ 'Can I ride my bike home after a crash?', 'Only if you&rsquo;re unhurt and you&rsquo;ve checked the bike properly: bars straight, forks not twisted, brakes and levers working, and no fuel or oil leaking. If in doubt, get it recovered.' ],
     [ 'How long do I have to claim after a motorbike accident?', 'In England and Wales, usually three years from the date of the accident for an injury claim. Don&rsquo;t leave it that long: evidence and witnesses are much easier to find early on.' ],
+    [ q(Can I get a replacement motorbike after an accident?), q(If the other driver was at fault, usually yes: their insurer or a credit hire company can provide a similar bike while yours is repaired or written off. Check who pays if the claim fails before you sign anything.) ],
+    [ q(Do I need a medical report after a motorbike accident?), q(For an injury claim, almost always. An independent medical expert examines you and writes it. Seeing your own doctor soon after the crash gives them an accurate record to work from.) ],
   ],
 },
 

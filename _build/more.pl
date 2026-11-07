@@ -918,6 +918,83 @@ HTML
     [ 'What if my phone is nearly dead?', 'Send your location first, before you call. Then keep the phone off until you see the truck, or call back at an agreed time.' ],
   ],
 },
+
+{
+  path => 'guides/motorbike-accident-claim', kind => 'guide', nav => 'guides', crumbs => $g, kicker => 'Claims',
+  label => 'Motorbike accident claims: what you need from the recovery', card => 'Invoices, storage records, photos and who pays.',
+  title => 'Motorbike Accident Claim? What You Need From the Recovery',
+  description => 'Making a motorbike accident claim in the North West? The recovery and storage records, photos and invoices your insurer or solicitor will ask for.',
+  h1 => 'Motorbike accident claims: what you need from the recovery',
+  lead => 'We&rsquo;re not solicitors and we don&rsquo;t handle claims. But the recovery is where a lot of the evidence starts, and it&rsquo;s easy to lose. Here&rsquo;s what to keep.',
+  body => <<'HTML',
+<h2>Who pays for the recovery?</h2>
+<p>If the accident wasn&rsquo;t your fault, the cost of recovering and storing your bike is normally part of your claim against the other driver&rsquo;s insurer, along with the repair or the bike&rsquo;s value, damaged kit and other losses. If it was your fault, a comprehensive policy may cover the recovery. Either way, you&rsquo;ll need the paperwork.</p>
+
+<h2>What to keep from the recovery</h2>
+<ul>
+  <li><strong>The invoice</strong>, with the date, the collection address and where the bike was taken.</li>
+  <li><strong>Photos of the bike</strong> before it was moved, and again when it was unloaded. Ask the driver to wait while you take them.</li>
+  <li><strong>The scene</strong>: the road surface, the junction, the other vehicle&rsquo;s position, skid marks and debris. These disappear within hours.</li>
+  <li><strong>Storage records</strong>, if the bike went to a police yard or a storage compound: the dates it went in and came out and what you paid.</li>
+  <li><strong>Where the bike is now</strong>. Insurers and engineers often want to inspect it. Don&rsquo;t start repairs or scrap it until they say so.</li>
+</ul>
+
+<h2>Storage costs add up</h2>
+<p>Police yards and storage compounds charge for every day a bike stays there. An insurer can refuse costs that built up because nobody moved the bike. Once it&rsquo;s released, get it moved to your home, a dealer or your insurer&rsquo;s approved repairer. See <a href="/accident-recovery/">accident recovery</a>.</p>
+
+<h2>Replacement bikes and credit hire</h2>
+<p>If you weren&rsquo;t at fault, you may be offered a replacement bike through the other insurer or a credit hire company. That can be very useful if you ride to work. Read the agreement first and check who pays if the claim fails.</p>
+
+<h2>Injury claims and time limits</h2>
+<p>In England and Wales you normally have three years from the date of the accident to start an injury claim. The 2021 whiplash rules that cap small road-traffic injury claims don&rsquo;t apply to motorcyclists or pillion passengers. If the other driver was uninsured or drove off, a claim may still be possible through the Motor Insurers&rsquo; Bureau. For any injury, speak to a solicitor who handles motorcycle cases.</p>
+
+<h2>Claims across the North West</h2>
+<p>We collect crashed bikes across Greater Manchester, Merseyside, Cheshire, Lancashire and Cumbria, from <a href="/motorbike-recovery/stockport/">Stockport</a> and <a href="/motorbike-recovery/warrington/">Warrington</a> to <a href="/motorbike-recovery/st-helens/">St Helens</a>, <a href="/motorbike-recovery/widnes-runcorn/">Runcorn</a>, <a href="/motorbike-recovery/wigan/">Wigan</a> and <a href="/motorbike-recovery/blackburn-burnley/">Burnley</a>. Every recovery comes with an invoice you can send to your insurer or solicitor.</p>
+<p>This is general information, not legal advice. See also <a href="/guides/after-a-motorbike-crash/">what to do after a motorbike accident</a>.</p>
+HTML
+  faq => [
+    [ 'Can I claim the recovery cost if the accident wasn&rsquo;t my fault?', 'Usually, yes, as part of your claim against the other driver&rsquo;s insurer. Keep our invoice and any storage receipts.' ],
+    [ 'Do you handle accident claims or compensation?', 'No. We recover and transport the bike and give you the paperwork. For compensation, speak to your insurer or a solicitor.' ],
+    [ 'Can you move my bike from a police yard to my insurer&rsquo;s repairer?', 'Yes, once it&rsquo;s released. Tell us the yard and the repairer, and you hear the price before we set off.' ],
+  ],
+},
+
+{
+  path => 'guides/motorbike-mot-and-service-collection', kind => 'guide', nav => 'guides', crumbs => $g, kicker => 'MOT &amp; servicing',
+  label => 'Getting a bike to its MOT or service', card => 'No MOT, a non-runner, or just no time.',
+  title => 'Motorbike MOT or Service? Getting a Bike There Without Riding',
+  description => 'Need a motorbike MOT or service in Lancashire or the North West but can&rsquo;t ride the bike there? Your options, the MOT rules, and collection and return.',
+  h1 => 'Getting a bike to its MOT or service',
+  lead => 'We don&rsquo;t do MOTs or repairs. But a lot of riders call us because the bike can&rsquo;t get to the garage on its own. Here&rsquo;s how it works.',
+  body => <<'HTML',
+<h2>Can you ride a bike without an MOT to its test?</h2>
+<p>Yes, in most cases. GOV.UK says you can ride a vehicle without a current MOT to a test that&rsquo;s already booked, or to a garage for repairs it needs to pass. It must still be insured and roadworthy. If the bike has a problem that makes it unsafe, such as worn-out tyres, broken lights or bad brakes, don&rsquo;t ride it there.</p>
+
+<h2>When transport makes sense</h2>
+<ul>
+  <li>The bike doesn&rsquo;t run, or you&rsquo;re not sure it will make it.</li>
+  <li>It&rsquo;s not insured right now, or it&rsquo;s been off the road on SORN all winter.</li>
+  <li>It has a fault that makes it unsafe to ride.</li>
+  <li>The best garage for your bike is a long way from home.</li>
+  <li>You&rsquo;re working and can&rsquo;t drop it off and collect it.</li>
+</ul>
+
+<h2>How it works</h2>
+<ol class="steps">
+  <li><strong>Book the garage first.</strong> Choose your MOT station, dealer or specialist and agree a date.</li>
+  <li><strong>Call us</strong> with the collection address, the garage and the date. You hear the price before we book it in.</li>
+  <li><strong>We deliver the bike</strong> and, when the garage is done, bring it home again.</li>
+</ol>
+
+<h2>Around Burnley and East Lancashire</h2>
+<p>Many of the calls we get about MOTs and servicing are from <a href="/motorbike-recovery/blackburn-burnley/">Burnley and Blackburn</a>, <a href="/motorbike-recovery/accrington/">Accrington</a>, <a href="/motorbike-recovery/nelson-colne/">Nelson and Colne</a> and the <a href="/motorbike-recovery/clitheroe/">Ribble Valley</a>, where riders often use a specialist garage some way from home. We cover the whole North West. See <a href="/motorcycle-transport/">motorcycle transport</a>.</p>
+<p>Bike been standing all winter? See <a href="/guides/laying-up-a-motorbike-for-winter/">laying up a motorbike</a> and <a href="/guides/motorbike-wont-start/">motorbike won&rsquo;t start</a> first.</p>
+HTML
+  faq => [
+    [ 'Do you do motorbike MOTs or servicing?', 'No. We transport bikes to the MOT station, dealer or garage you choose, and bring them back.' ],
+    [ 'Can you take my bike to its MOT and bring it back the same day?', 'Often, yes, if the garage is quick. Tell us the booking time and we&rsquo;ll fit the return around it.' ],
+  ],
+},
 ;
 
 1;
