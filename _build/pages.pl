@@ -15,9 +15,40 @@ push @main::PAGES,
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Bike Rescue North West",
-  "url": "https://motorbikerecoverynorthwest.uk/"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://motorbikerecoverynorthwest.uk/#website",
+      "name": "Bike Rescue North West",
+      "url": "https://motorbikerecoverynorthwest.uk/",
+      "publisher": { "@id": "https://motorbikerecoverynorthwest.uk/#org" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://motorbikerecoverynorthwest.uk/#org",
+      "name": "Bike Rescue North West",
+      "url": "https://motorbikerecoverynorthwest.uk/",
+      "logo": "https://motorbikerecoverynorthwest.uk/assets/favicon.svg",
+      "telephone": "+447520639867",
+      "description": "24/7 motorbike, scooter and moped recovery and transport across North West England, through a network of bike-equipped recovery operators.",
+      "knowsAbout": ["Motorbike recovery", "Motorcycle breakdown recovery", "Motorbike accident recovery", "Motorcycle transport", "Scooter and moped recovery", "Track day bike transport"],
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Greater Manchester" },
+        { "@type": "AdministrativeArea", "name": "Merseyside" },
+        { "@type": "AdministrativeArea", "name": "Cheshire" },
+        { "@type": "AdministrativeArea", "name": "Lancashire" },
+        { "@type": "AdministrativeArea", "name": "Cumbria" }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+447520639867",
+        "contactType": "customer service",
+        "areaServed": "GB",
+        "availableLanguage": "en",
+        "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" }
+      }
+    }
+  ]
 }
 </script>
 LD
@@ -96,7 +127,7 @@ HTML
 {
   path => 'services', label => 'Services', nav => 'services', crumbs => [], kicker => 'Services',
   title => 'Motorbike Recovery &amp; Transport Services | North West',
-  description => 'Every motorbike recovery and transport service we offer across the North West: breakdowns, accidents, planned transport, track days, scooters and stolen bike collection.',
+  description => 'Every motorbike recovery and transport service across the North West: breakdowns, accidents, planned transport, track days, scooters and stolen bikes.',
   h1 => 'Recovery and transport for every kind of bike',
   lead => 'Pick the one that matches, or just call and tell us what&rsquo;s happened.',
   body => "{{LIST:service}}\n",
@@ -105,7 +136,7 @@ HTML
 {
   path => 'motorbike-recovery', label => 'Areas', nav => 'motorbike-recovery', crumbs => [], kicker => 'Areas',
   title => 'Areas We Cover | Motorbike Recovery Across the North West',
-  description => 'Motorbike recovery across Greater Manchester, Merseyside, Cheshire, Lancashire and Cumbria: Manchester, Stockport, Bolton, Wigan, Warrington, Liverpool, Wirral, Chester, Preston, Blackpool, Blackburn, Lancaster and the Lakes.',
+  description => 'Motorbike recovery across Greater Manchester, Merseyside, Cheshire, Lancashire and Cumbria, from Manchester, Liverpool and Chester to Preston and the Lakes.',
   h1 => 'Every corner of the North West',
   lead => 'Cities, motorways, moors and passes. These are the areas we&rsquo;re called to most, each with its own local notes.',
   body => <<'HTML',
@@ -116,8 +147,8 @@ HTML
 
 {
   path => 'biker-roads', label => 'Biker roads', nav => 'biker-roads', crumbs => [], kicker => 'Biker roads',
-  title => 'North West Biker Roads | Breakdown &amp; Recovery Help for Each Route',
-  description => 'Broken down on the Cat and Fiddle, Snake Pass, the Trough of Bowland, Hardknott or Kirkstone? How to get found and recovered on the North West&rsquo;s favourite biking roads.',
+  title => 'North West Biker Roads | Breakdown &amp; Recovery Help by Route',
+  description => 'Broken down on the Cat and Fiddle, Snake Pass, Trough of Bowland or Kirkstone? How to get found and recovered on the North West&rsquo;s best biking roads.',
   h1 => 'The best roads. The hardest places to break down.',
   lead => 'Moorland, passes and Lakeland roads, with patchy signal and long distances. Here&rsquo;s how to get found and recovered on each one.',
   body => "{{LIST:road}}\n",
@@ -126,7 +157,7 @@ HTML
 {
   path => 'guides', label => 'Guides', nav => 'guides', crumbs => [], kicker => 'Guides',
   title => 'Motorbike Breakdown &amp; Recovery Guides',
-  description => 'Practical guides for riders: what motorbike recovery costs, what to do after a crash, how a bike should be strapped down, and what to check when your bike won&rsquo;t start.',
+  description => 'Practical guides for riders: what recovery costs, what to do after a crash, how to strap down a bike, and what to check when it won&rsquo;t start.',
   h1 => 'Guides for riders',
   lead => 'Straight answers to the questions riders ask us most.',
   body => "{{LIST:guide}}\n",
@@ -225,8 +256,8 @@ HTML
 {
   path => 'guides/how-to-strap-down-a-motorbike', kind => 'guide', nav => 'guides', crumbs => $g, kicker => 'Transport',
   label => 'How a motorbike should be strapped down', card => 'What a good recovery operator does, and what to watch for.',
-  title => 'How to Strap Down a Motorbike for Transport (Without Damaging It)',
-  description => 'How a motorcycle should be secured on a trailer or recovery truck: wheel chocks, soft loops, strap angles, fork compression, and the mistakes that bend bars and crack fairings.',
+  title => 'How to Strap Down a Motorbike for Transport Without Damage',
+  description => 'How to secure a motorbike on a trailer or truck: wheel chocks, soft loops, strap angles, fork compression, and the mistakes that bend bars and crack fairings.',
   h1 => 'How a motorbike should be strapped down',
   lead => 'Most damage during transport comes from bad strapping, not from the road. Here&rsquo;s what good practice looks like, whether you&rsquo;re doing it yourself or watching a recovery operator.',
   body => <<'HTML',
@@ -252,8 +283,8 @@ HTML
 {
   path => 'guides/motorbike-wont-start', kind => 'guide', nav => 'guides', crumbs => $g, kicker => 'Won&rsquo;t start',
   label => 'Motorbike won&rsquo;t start? Check these first', card => 'Kill switch, side stand, clutch and fuel: the free fixes.',
-  title => 'Motorbike Won&rsquo;t Start? 9 Things to Check Before You Call Recovery',
-  description => 'Motorbike won&rsquo;t start? Check the kill switch, side stand, clutch switch, neutral, fuel, battery, fuses and immobiliser before calling recovery. What each symptom means.',
+  title => 'Motorbike Won&rsquo;t Start? 9 Checks Before You Call Recovery',
+  description => 'Motorbike won&rsquo;t start? Check the kill switch, side stand, clutch switch, neutral, fuel, battery, fuses and immobiliser first. What each symptom means.',
   h1 => 'Bike won&rsquo;t start? Check these first.',
   lead => 'A surprising number of recovery calls are solved by a switch. Run through these before you call. It might save you the fee.',
   body => <<'HTML',
@@ -280,7 +311,7 @@ HTML
 {
   path => 'about-us', label => 'About', crumbs => [], kicker => 'About',
   title => 'About Us | How Bike Rescue North West Works',
-  description => 'How motorbikerecoverynorthwest.uk works: 24/7 call handling, a network of vetted bike-equipped recovery operators across the North West, and the price agreed before dispatch.',
+  description => 'How Bike Rescue North West works: 24/7 call handling, a network of vetted, bike-equipped recovery operators across the North West, and the price agreed first.',
   h1 => 'How this service works',
   lead => 'We&rsquo;re a 24/7 call service for motorbike recovery across the North West. You talk to a person, get a price, and we send the nearest suitable bike-equipped truck.',
   body => <<'HTML',

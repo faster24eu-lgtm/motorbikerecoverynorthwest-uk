@@ -49,9 +49,40 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Bike Rescue North West",
-  "url": "https://motorbikerecoverynorthwest.uk/"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://motorbikerecoverynorthwest.uk/#website",
+      "name": "Bike Rescue North West",
+      "url": "https://motorbikerecoverynorthwest.uk/",
+      "publisher": { "@id": "https://motorbikerecoverynorthwest.uk/#org" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://motorbikerecoverynorthwest.uk/#org",
+      "name": "Bike Rescue North West",
+      "url": "https://motorbikerecoverynorthwest.uk/",
+      "logo": "https://motorbikerecoverynorthwest.uk/assets/favicon.svg",
+      "telephone": "+447520639867",
+      "description": "24/7 motorbike, scooter and moped recovery and transport across North West England, through a network of bike-equipped recovery operators.",
+      "knowsAbout": ["Motorbike recovery", "Motorcycle breakdown recovery", "Motorbike accident recovery", "Motorcycle transport", "Scooter and moped recovery", "Track day bike transport"],
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Greater Manchester" },
+        { "@type": "AdministrativeArea", "name": "Merseyside" },
+        { "@type": "AdministrativeArea", "name": "Cheshire" },
+        { "@type": "AdministrativeArea", "name": "Lancashire" },
+        { "@type": "AdministrativeArea", "name": "Cumbria" }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+447520639867",
+        "contactType": "customer service",
+        "areaServed": "GB",
+        "availableLanguage": "en",
+        "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" }
+      }
+    }
+  ]
 }
 </script>
 </head>

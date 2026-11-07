@@ -225,6 +225,8 @@ my @ROADS = (
     about => 'It climbs from Macclesfield onto open moorland, with the Cat and Fiddle inn near the summit, and then drops down to Buxton. Bends tighten unexpectedly, the surface is patched, and weather on top can be very different from the valleys. The road is closed after serious crashes, sometimes for hours.',
     trouble => 'Overheating on the climb in summer traffic, clutch failures on a stop-start Sunday, punctures from the patched surface, and drops at low speed on the summit car park gravel.',
     safe => 'If you stop, get well off the road. The verges are narrow in places, so the inn car park or a lay-by is best. Tell us whether you&rsquo;re on the Macclesfield or the Buxton side of the summit. It decides which way the truck comes in.',
+    extra => [ 'Cat and Fiddle cameras and road status', '<p>The cameras on the Cat and Fiddle are average-speed cameras, not fixed spot cameras. They time you between pairs of cameras along the road and work out your average speed, so braking for one camera and speeding up again doesn&rsquo;t help. The limit along most of the road is 50&nbsp;mph, so watch the signs. The cameras went in after the A537 was named one of Britain&rsquo;s most dangerous roads for motorcyclists.</p>
+<p>We don&rsquo;t run a webcam on the road. Before you ride it, check for closures and roadworks on the Cheshire East and Derbyshire council road pages or a live traffic map, especially in winter and after a crash, when the road can be shut for hours.</p>' ],
     towns => [qw(stockport manchester)],
   },
   {
@@ -310,7 +312,7 @@ for my $t (@TOWNS) {
     path => "motorbike-recovery/$t->{slug}", kind => 'area', nav => 'motorbike-recovery', crumbs => [ [ 'Areas', 'motorbike-recovery' ] ],
     label => $N, card => $t->{county}, kicker => "$t->{short} &middot; 24/7",
     service => 'Motorcycle recovery', area => "$np, $t->{county}" =~ s/&amp;/&/gr,
-    title => "Motorbike Recovery " . ($N =~ s/^The //r) . " 24/7 | Breakdown, Accident &amp; Transport",
+    title => fit_title("Motorbike Recovery " . ($N =~ s/^The //r) . " 24/7 | Breakdown &amp; Accident", "Motorbike Recovery " . ($N =~ s/^The //r) . " 24/7"),
     description => "24/7 motorbike and scooter recovery in $n: breakdowns, accidents and transport. Bike chocks and soft straps, price agreed upfront.",
     h1 => "Motorbike recovery in $n",
     lead => "Breakdowns, crashes, stolen and found bikes, scooters and track bikes, recovered across $t->{county}, 24 hours a day.",
@@ -334,6 +336,7 @@ $l2
   <li><a href="/scooter-recovery/">Scooters &amp; mopeds</a></li>
   <li><a href="/stolen-motorbike-recovery/">Stolen bike collection</a></li>
 </ul>
+<p>Been in a crash around $t->{short}? Read <a href="/guides/after-a-motorbike-crash/">what to do after a motorbike accident</a>, step by step, from the roadside to the claim.</p>
 
 <h2>Price</h2>
 <p>The price for a recovery around $t->{short} depends on distance, the time of day or night and how easy the bike is to load. You hear it in full on the call and agree it before anyone sets off. See <a href="/guides/motorbike-recovery-cost/">what motorbike recovery costs</a>.</p>
@@ -349,18 +352,19 @@ HTML
 
 for my $r (@ROADS) {
   my $towns = join "\n", map { tlink($_) } @{ $r->{towns} };
+  my $extra = $r->{extra} ? "\n<h2>$r->{extra}[0]</h2>\n$r->{extra}[1]\n" : '';
   push @main::PAGES, {
     path => "biker-roads/$r->{slug}", kind => 'road', nav => 'biker-roads', crumbs => [ [ 'Biker roads', 'biker-roads' ] ],
     label => $r->{name}, card => $r->{where}, kicker => "$r->{short} &middot; recovery",
     service => 'Motorcycle recovery', area => plain_name("$r->{name}, $r->{where}"),
-    title => "Broken Down on the $r->{name}? Motorbike Recovery 24/7",
-    description => "Motorbike broken down or dropped on the $r->{name} ($r->{where})? What to do, how to tell us where you are, and 24/7 recovery home or to a garage.",
+    title => fit_title("Broken Down on the $r->{name}? Motorbike Recovery 24/7", "Broken Down on the $r->{name}? Bike Recovery 24/7", "Broken Down on the " . ($r->{name} =~ s/,.*//r) . "? Motorbike Recovery 24/7"),
+    description => "Broken down or dropped your bike on the $r->{name}? How to get found, where to wait, and 24/7 motorbike recovery home or to a garage.",
     h1 => "Bike trouble on the $r->{name}?",
     lead => $r->{intro},
     body => <<"HTML",
 <h2>The road</h2>
 <p>$r->{about}</p>
-
+$extra
 <h2>What usually goes wrong here</h2>
 <p>$r->{trouble}</p>
 
@@ -383,6 +387,9 @@ HTML
     ],
   };
 }
+
+# First candidate whose visible length fits in Google's title width (about 62 characters).
+sub fit_title { for (@_) { return $_ if length(main::plain($_)) <= 62 } $_[-1] }
 
 sub plain_name { my $s = shift; $s =~ s/&amp;/&/g; $s =~ s/&rsquo;/'/g; $s }
 
