@@ -12,6 +12,11 @@
 <meta property="og:title" content="Broken Down on the Honister Pass (B5289)? Bike Recovery 24/7">
 <meta property="og:description" content="Broken down or dropped your bike on the Honister Pass (B5289)? How to get found, where to wait, and 24/7 motorbike recovery home or to a garage.">
 <meta property="og:url" content="https://motorbikerecoverynorthwest.uk/biker-roads/honister-pass/">
+<meta property="og:image" content="https://motorbikerecoverynorthwest.uk/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bike Rescue North West, 24/7 motorbike recovery">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -98,6 +103,8 @@
 
 <h2>If you&rsquo;re stuck right now</h2>
 <p>The slate mine car park at the top is the safest place to stop and the easiest place for a truck to load. If you stop on the climb, get the bike right in to the side and use your hazard lights. Tell us whether you&rsquo;re on the Borrowdale or the Buttermere side.</p>
+<h2>Where to stop and phone signal</h2>
+<p>Seatoller at the Borrowdale end and Gatesgarth at the Buttermere end both have parking, and the slate mine sits at the top. Signal on Honister itself is poor to non-existent, and the slate mine is often the nearest place where someone can help you get a message out.</p>
 <ol class="steps">
   <li><strong>Get off the road</strong>, and get the bike off it too if you can.</li>
   <li><strong>Send your location</strong>: a WhatsApp live pin, what3words, or the last landmark you passed.</li>
@@ -125,12 +132,12 @@
   <input type="hidden" name="_subject" value="motorbikerecoverynorthwest.uk: new recovery request">
   <input type="hidden" name="_next" value="https://motorbikerecoverynorthwest.uk/thank-you/">
   <input type="hidden" name="_template" value="table">
-  <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
-  <label>Your name<input type="text" name="name" required autocomplete="name"></label>
-  <label>Phone number<input type="tel" name="phone" required autocomplete="tel"></label>
-  <label>Where is the bike? <small>Road, postcode, lay-by or what3words</small><input type="text" name="pickup" required></label>
-  <label>Where should it go?<input type="text" name="dropoff" placeholder="Home, dealer, garage, track"></label>
-  <label>Bike and problem<textarea name="details" rows="3" placeholder="e.g. 2019 Yamaha MT-07, dropped it, front brake lever snapped"></textarea></label>
+  <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Leave this field empty">
+  <label for="q-name">Your name<input id="q-name" type="text" name="name" required autocomplete="name"></label>
+  <label for="q-phone">Phone number<input id="q-phone" type="tel" name="phone" required autocomplete="tel"></label>
+  <label for="q-pickup">Where is the bike? <small>Road, postcode, lay-by or what3words</small><input id="q-pickup" type="text" name="pickup" required></label>
+  <label for="q-dropoff">Where should it go?<input id="q-dropoff" type="text" name="dropoff" placeholder="Home, dealer, garage, track"></label>
+  <label for="q-details">Bike and problem<textarea id="q-details" name="details" rows="3" placeholder="e.g. 2019 Yamaha MT-07, dropped it, front brake lever snapped"></textarea></label>
   <button type="submit" class="btn btn-lime"><span>Send &ndash; we call you back</span></button>
   <p class="fine">Hurt, or in a live lane? Call 999 first. Then call us: <a href="tel:+447520639867">07520 639867</a>.</p>
 </form>

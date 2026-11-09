@@ -4,7 +4,7 @@ use utf8;
 
 my @TOWNS = (
   {
-    slug => 'manchester', name => 'Manchester', county => 'Greater Manchester', short => 'Manchester',
+    slug => 'manchester', name => 'Manchester', county => 'Greater Manchester', short => 'Manchester', h1 => 'Motorbike Recovery Manchester 24/7',
     intro => 'From the city centre to Salford Quays, Trafford Park and out to the M60, Manchester has more riders, more delivery scooters and more stolen bikes than anywhere else in the North West. We recover them all, 24/7.',
     roads => [
       [ 'M60 ring road', 'Busy lane changes and long stretches of roadworks. Get behind the barrier and call.' ],
@@ -225,6 +225,7 @@ my @ROADS = (
     about => 'It climbs from Macclesfield onto open moorland, with the Cat and Fiddle inn near the summit, and then drops down to Buxton. Bends tighten unexpectedly, the surface is patched, and weather on top can be very different from the valleys. The road is closed after serious crashes, sometimes for hours.',
     trouble => 'Overheating on the climb in summer traffic, clutch failures on a stop-start Sunday, punctures from the patched surface, and drops at low speed on the summit car park gravel.',
     safe => 'If you stop, get well off the road. The verges are narrow in places, so the inn car park or a lay-by is best. Tell us whether you&rsquo;re on the Macclesfield or the Buxton side of the summit. It decides which way the truck comes in.',
+    signal => 'The car park by the old Cat and Fiddle building at the summit is the best place to wait; below it, use the lay-bys rather than the narrow verge on a bend. Signal is usually better up on the open moor than in the dips on the Buxton side, so if a call keeps dropping, walk up to higher ground before you try again.',
     extra => [ 'Cat and Fiddle cameras and road status', '<p>The cameras on the Cat and Fiddle are average-speed cameras, not fixed spot cameras. They time you between pairs of cameras along the road and work out your average speed, so braking for one camera and speeding up again doesn&rsquo;t help. The limit along most of the road is 50&nbsp;mph, so watch the signs. The cameras went in after the A537 was named one of Britain&rsquo;s most dangerous roads for motorcyclists.</p>
 <p>We don&rsquo;t run a webcam on the road. Before you ride it, check for closures and roadworks on the Cheshire East and Derbyshire council road pages or a live traffic map, especially in winter and after a crash, when the road can be shut for hours.</p>' ],
     towns => [qw(stockport manchester)],
@@ -235,6 +236,7 @@ my @ROADS = (
     about => 'Sharp bends, steep drops, moorland exposure and a surface that shifts and cracks: the Snake is beautiful and demanding. Check it&rsquo;s open before you set off. It closes frequently in winter and after heavy rain.',
     trouble => 'Overheated clutches on the climbs, drops on cold tyres in the morning, punctures from debris, and bikes that just stop in the cold and wet up on the tops.',
     safe => 'Stop in a lay-by if you can. There are few of them, so remember the last one you passed. Signal comes and goes. Send your location the moment you have it, and tell us if you&rsquo;re nearer Glossop or Ladybower.',
+    signal => 'On the Ladybower side, the Snake Pass Inn car park is the obvious safe stop. Coming up from Glossop, the lay-bys near the summit are your best bet. Expect signal to vanish in the wooded valley around the inn and again on the steepest part of the Glossop climb.',
     towns => [qw(manchester stockport)],
   },
   {
@@ -243,6 +245,7 @@ my @ROADS = (
     about => 'Riders come from all over the North of England via the A65, the A683 Lune Valley and the roads from the Dales. It&rsquo;s a great place to break down, as far as places to break down go: there&rsquo;s space, other riders and a postcode.',
     trouble => 'Bikes that won&rsquo;t restart after a long stop (batteries and starter relays), side-stand drops in the busy car park, and breakdowns on the A65 on the way home.',
     safe => 'If the bike won&rsquo;t restart at the bridge, stay in the car park area and send us your pin. It&rsquo;s an easy place for a recovery truck to load.',
+    signal => 'The lay-by and parking area at the bridge are where the bikes gather, and there are toilets close by. Signal is normally fine in and around Kirkby Lonsdale, so this is one of the few biker stops where you can call us straight away and share a live pin.',
     towns => [qw(lake-district lancaster)],
   },
   {
@@ -251,6 +254,7 @@ my @ROADS = (
     about => 'It&rsquo;s a slow, technical ride rather than a fast one: blind crests, gravel, and the odd cattle grid on a bend. Lovely on a dry day, slippery after rain.',
     trouble => 'Low-speed drops on gravel or a cattle grid, punctures, and bikes that won&rsquo;t restart after stopping for photos. The biggest problem is usually getting signal to call.',
     safe => 'Note the last landmark: Dunsop Bridge, the Trough summit, Marshaw or Abbeystead. Walk to higher ground for signal if you have to. A what3words address is perfect here.',
+    signal => 'Dunsop Bridge, with its car park and caf&eacute;, is the safest and best-signposted place to wait at the eastern end. On the open moor there are a few small pull-ins, but much of the road has no signal at all, so ride or walk towards Dunsop Bridge or the Lancaster side before you try to call.',
     towns => [qw(lancaster preston blackburn-burnley)],
   },
   {
@@ -259,6 +263,7 @@ my @ROADS = (
     about => 'Steep gradients, a hairpin and a car park at the top with views over the Ribble Valley. Short, but it catches people out, particularly two-up and on cold tyres.',
     trouble => 'Low-speed drops on the hairpin, stalled and dropped bikes on the climb, and clutches cooked from slipping on the steepest part.',
     safe => 'Get the bike off the road. The car park at the Nick is the best place to wait. Tell us whether you&rsquo;re on the Sabden or Clitheroe side.',
+    signal => 'The car park at the top of the Nick is the natural place to stop, and it is well known locally, which helps a driver find you. Signal is usually stronger up there than down in Sabden, which sits in a hollow.',
     towns => [qw(blackburn-burnley preston bolton)],
   },
   {
@@ -267,6 +272,7 @@ my @ROADS = (
     about => 'The A592 from Windermere is the gentler approach. The road from Ambleside, nicknamed &ldquo;The Struggle&rdquo;, is very steep. Weather at the top can close in quickly, with fog, ice and snow in winter.',
     trouble => 'Clutches burned on The Struggle, overheating in summer traffic, and drops on the steep hairpins.',
     safe => 'The inn car park at the summit is the safest place to wait. Tell us which side of the pass you&rsquo;re on: Windermere, Ambleside or Ullswater.',
+    signal => 'The car park at the Kirkstone Pass Inn is the only proper stopping place near the summit. On the Ullswater side, Brothers Water and Patterdale have parking at the foot of the descent. Signal is unreliable on the upper part of the pass, especially in cloud, so try again at the inn if your call won&rsquo;t connect.',
     towns => [qw(lake-district)],
   },
   {
@@ -275,6 +281,7 @@ my @ROADS = (
     about => 'Single track, with tight hairpins at extreme gradients and passing places only. Big adventure bikes and tourers struggle on the hairpins, especially two-up, and a stall on the steepest part often ends in a drop.',
     trouble => 'Dropped bikes on the hairpins, burnt clutches, and bikes that can&rsquo;t restart on the slope. Snapped levers and bent pegs.',
     safe => 'If you&rsquo;ve dropped on a hairpin, get help to lift it and walk it to a passing place if you can. Recovery trucks can&rsquo;t always reach the steepest sections, so we&rsquo;ll tell you where we can load from.',
+    signal => 'There is a little parking near Hardknott Roman Fort on the Eskdale side, and more room at Cockley Beck where the Duddon road joins. Plan on having no phone signal on Hardknott or Wrynose; most riders have to get down into Eskdale or Little Langdale before they can call.',
     towns => [qw(lake-district)],
   },
   {
@@ -283,6 +290,7 @@ my @ROADS = (
     about => 'A fast road with long open bends and some tight hairpins on the western climb. The summit is high and exposed. Wind and fog are common, and snow closes it in winter.',
     trouble => 'Bikes that stop in the cold and wet, punctures, and long waits because it&rsquo;s a long way from anywhere.',
     safe => 'Use the summit area or a lay-by to stop. Tell us whether you&rsquo;re on the Penrith or the Alston side. It&rsquo;s a long run either way, and you hear the price before we set off.',
+    signal => 'The summit area at the top of the climb is the best place to wait, with room to get well off the road. At the foot, Melmerby on the Penrith side and Alston on the other side are the nearest villages. Signal fades on the long western climb and over the top, so note the last bend or landmark you passed.',
     towns => [qw(lake-district)],
   },
   {
@@ -291,6 +299,7 @@ my @ROADS = (
     about => 'It sweeps round the head of the valley in a horseshoe, with long bends and a busy caf&eacute; car park at the summit, full of bikes on a sunny weekend.',
     trouble => 'Bikes that won&rsquo;t restart after the caf&eacute; stop, drops in the busy car park, and punctures on the descent.',
     safe => 'The summit car park is the place to wait. We&rsquo;ll come out from Chester or the Wirral and take you home.',
+    signal => 'The caf&eacute; car park at the summit is where most riders stop, and a truck can load there easily. Down the Llangollen side, use a lay-by rather than the hairpins. Signal is usually workable near the summit, but it can be weak lower down in the valley.',
     towns => [qw(chester wirral)],
   },
 );
@@ -337,7 +346,7 @@ for my $t (@TOWNS) {
     service => 'Motorcycle recovery', area => "$np, $t->{county}" =~ s/&amp;/&/gr,
     title => fit_title("Motorbike Recovery " . ($N =~ s/^The //r) . " 24/7 | Breakdown &amp; Accident", "Motorbike Recovery " . ($N =~ s/^The //r) . " 24/7"),
     description => "24/7 motorbike and scooter recovery in $n: breakdowns, accidents and transport. Bike chocks and soft straps, price agreed upfront.",
-    h1 => "Motorbike recovery in $n",
+    h1 => $t->{h1} // "Motorbike recovery in $n",
     lead => "Breakdowns, crashes, stolen and found bikes, scooters and track bikes, recovered across $t->{county}, 24 hours a day.",
     body => <<"HTML",
 <p>$t->{intro}</p>
@@ -394,6 +403,7 @@ $extra
 
 <h2>If you&rsquo;re stuck right now</h2>
 <p>$r->{safe}</p>
+${\ ($r->{signal} ? "<h2>Where to stop and phone signal</h2>\n<p>$r->{signal}</p>" : '')}
 <ol class="steps">
   <li><strong>Get off the road</strong>, and get the bike off it too if you can.</li>
   <li><strong>Send your location</strong>: a WhatsApp live pin, what3words, or the last landmark you passed.</li>

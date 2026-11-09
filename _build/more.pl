@@ -118,6 +118,48 @@ HTML
 },
 
 {
+  path => 'motorways/m6-m60-m62-manchester', kind => 'motorway', nav => 'services', crumbs => $mw, kicker => 'M6 &middot; M60 &middot; M62',
+  label => 'M6, M60 &amp; M62', card => 'How the three motorways round Manchester join up, and how to say where you are.',
+  service => 'Motorcycle recovery on the M6, M60 and M62',
+  title => 'Motorbike Recovery M6, M60 &amp; M62 | Manchester 24/7',
+  description => 'Broken down where the M6, M60 and M62 meet around Manchester? How to tell us where you are, smart motorway emergency areas, and 24/7 recovery.',
+  h1 => 'Motorbike recovery on the M6, M60 and M62',
+  lead => 'Three motorways, one tangle of junctions. Most riders who call us from round Manchester aren&rsquo;t sure which motorway they&rsquo;re on. Here&rsquo;s how to work it out, and what to do while you wait.',
+  body => <<'HTML' . $mw_safe,
+<h2>How the three motorways join up</h2>
+<p>The M6 runs north&ndash;south to the west of Manchester. The M62 runs east&ndash;west from Liverpool to Yorkshire, and the M60 is the ring road round the city. They meet at three big interchanges, and that is where riders most often lose track of which road they&rsquo;re on:</p>
+<ul>
+  <li><strong>Croft Interchange</strong>, north of Warrington, where the M62 crosses the M6 (M6 junction 21a, M62 junction 10).</li>
+  <li><strong>Eccles</strong>, where the M62 coming in from the west joins the ring road at M60 junction 12.</li>
+  <li><strong>Simister Island</strong>, at M60 junction 18, where the M62 leaves the ring road again and heads for the Pennines.</li>
+</ul>
+<p>Between Eccles and Simister, the M62 and the M60 are the same stretch of road, signed as the M60. If you came off the M62 from Liverpool and kept going north round Manchester, you are on the M60 there, even if your satnav says otherwise.</p>
+
+<h2>Tell us where you are, in this order</h2>
+<ol class="steps">
+  <li><strong>The motorway number</strong> on the nearest blue sign, not the one you joined.</li>
+  <li><strong>Your direction</strong>: clockwise or anticlockwise on the M60, or the next big place on the signs, such as &ldquo;M6 north, Preston&rdquo; or &ldquo;M62 east, Leeds&rdquo;.</li>
+  <li><strong>The last junction number</strong> you passed.</li>
+  <li><strong>The small blue driver location sign</strong> on the verge, if you can see one. It shows the motorway, a letter for the carriageway and a distance, and it pins you down to a few hundred metres.</li>
+</ol>
+<p>A WhatsApp live location does all of this in one go. Send it as soon as you are safe, even if the call has to wait.</p>
+
+<h2>Smart motorway stretches and emergency areas</h2>
+<p>Large parts of all three motorways round Manchester are smart motorways, and some of them have no permanent hard shoulder. If the bike starts losing power there, don&rsquo;t stop in a running lane. Aim for the next exit or the next emergency area: an orange-surfaced lay-by marked by blue signs with an orange SOS telephone symbol. Once you&rsquo;re in one, get behind the barrier and use the SOS phone, which connects you to National Highways, who can close the lane behind you if needed.</p>
+<p>A red X above a lane means that lane is closed, often because someone has stopped in it. If your bike has died in a live lane and you can&rsquo;t move it, get yourself off the carriageway and call 999. National Highways or the police may arrange the first recovery themselves; we can collect the bike from wherever they leave it.</p>
+
+<h2>Slip roads and links between motorways</h2>
+<p>The links at Croft, Eccles and Simister are long, curved and busy, and some have little room at the side. If the bike fails on one, don&rsquo;t try to push it back to the main carriageway. Get behind the barrier, and tell us you&rsquo;re on a link road and which two motorways it joins. It changes the way the truck comes in.</p>
+
+<h2>Where we take the bike</h2>
+<p>Most bikes we collect around these interchanges go home or to a dealer in Manchester, Warrington or Bolton. For each motorway on its own, see the <a href="/motorways/m6/">M6</a>, <a href="/motorways/m60/">M60</a> and <a href="/motorways/m62/">M62</a> pages, and for the city itself, <a href="/motorbike-recovery/manchester/">motorbike recovery Manchester 24/7</a>.</p>
+HTML
+  faq => [
+    [ 'My satnav says M62 but the signs say M60. Which is it?', 'Between Eccles (junction 12) and Simister Island (junction 18) it&rsquo;s the same road, signed M60. Tell us M60, your direction and the last junction.' ],
+    [ 'There&rsquo;s no hard shoulder where my bike stopped. Can you still get to me?', 'Yes, once you&rsquo;re safe. If the bike is in a live lane, call 999 first. Recovery from a live lane may be arranged by National Highways or the police; we&rsquo;ll take it on from there.' ],
+  ],
+},
+{
   path => 'motorways/m61', kind => 'motorway', nav => 'services', crumbs => $mw, kicker => 'M61',
   label => 'M61', card => 'Manchester to Preston, past Bolton and Rivington.',
   service => 'Motorcycle recovery on the M61',

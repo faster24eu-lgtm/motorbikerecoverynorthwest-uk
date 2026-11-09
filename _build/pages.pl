@@ -10,7 +10,7 @@ push @main::PAGES,
   title => q(Motorbike Rescue &amp; Recovery North West 24/7 | No Membership),
   description => '24/7 motorbike, scooter and moped recovery across Manchester, Liverpool, Lancashire, Cheshire and Cumbria. No membership. Price agreed before we set off.',
   h1 => q(Motorbike rescue and recovery across the North West),
-  lead => 'Broken down on the M6, dropped it on the Cat and Fiddle, or need a track bike at Oulton Park by 8&nbsp;am? Call, hear the price, and a bike-ready truck comes to you. No membership.',
+  lead => 'Broken down on the M6, dropped it on the Cat and Fiddle, or need a track bike at Oulton Park by 8&nbsp;am? Call, hear the price, and a bike-ready truck comes to you. No membership. In the city? See <a href="/motorbike-recovery/manchester/">motorbike recovery Manchester 24/7</a>.',
   schema => <<'LD',
 <script type="application/ld+json">
 {
@@ -376,6 +376,7 @@ HTML
   <li><strong>WhatsApp:</strong> <a href="{{WA_HREF}}">send your location</a></li>
 </ul>
 <p>We don&rsquo;t have a public office. Recovery trucks come to wherever your bike is.</p>
+<p>Broken down in Greater Manchester? Our <a href="/motorbike-recovery/manchester/">Motorbike Recovery Manchester 24/7</a> page covers the M60, the city centre and the routes out to the Peak.</p>
 HTML
 },
 

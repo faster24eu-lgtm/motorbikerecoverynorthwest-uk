@@ -12,6 +12,11 @@
 <meta property="og:title" content="Contact | 24/7 Motorbike Recovery North West">
 <meta property="og:description" content="Call or WhatsApp 24/7 for motorbike recovery across the North West, or send your details and we'll call you back with a price.">
 <meta property="og:url" content="https://motorbikerecoverynorthwest.uk/contact-us/">
+<meta property="og:image" content="https://motorbikerecoverynorthwest.uk/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bike Rescue North West, 24/7 motorbike recovery">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,6 +74,7 @@
   <li><strong>WhatsApp:</strong> <a href="https://wa.me/447988974609?text=Hi%2C%20I%20need%20motorbike%20recovery.%20My%20location%20is%3A%20">send your location</a></li>
 </ul>
 <p>We don&rsquo;t have a public office. Recovery trucks come to wherever your bike is.</p>
+<p>Broken down in Greater Manchester? Our <a href="/motorbike-recovery/manchester/">Motorbike Recovery Manchester 24/7</a> page covers the M60, the city centre and the routes out to the Peak.</p>
 
 
   </article>
@@ -81,12 +87,12 @@
   <input type="hidden" name="_subject" value="motorbikerecoverynorthwest.uk: new recovery request">
   <input type="hidden" name="_next" value="https://motorbikerecoverynorthwest.uk/thank-you/">
   <input type="hidden" name="_template" value="table">
-  <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
-  <label>Your name<input type="text" name="name" required autocomplete="name"></label>
-  <label>Phone number<input type="tel" name="phone" required autocomplete="tel"></label>
-  <label>Where is the bike? <small>Road, postcode, lay-by or what3words</small><input type="text" name="pickup" required></label>
-  <label>Where should it go?<input type="text" name="dropoff" placeholder="Home, dealer, garage, track"></label>
-  <label>Bike and problem<textarea name="details" rows="3" placeholder="e.g. 2019 Yamaha MT-07, dropped it, front brake lever snapped"></textarea></label>
+  <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Leave this field empty">
+  <label for="q-name">Your name<input id="q-name" type="text" name="name" required autocomplete="name"></label>
+  <label for="q-phone">Phone number<input id="q-phone" type="tel" name="phone" required autocomplete="tel"></label>
+  <label for="q-pickup">Where is the bike? <small>Road, postcode, lay-by or what3words</small><input id="q-pickup" type="text" name="pickup" required></label>
+  <label for="q-dropoff">Where should it go?<input id="q-dropoff" type="text" name="dropoff" placeholder="Home, dealer, garage, track"></label>
+  <label for="q-details">Bike and problem<textarea id="q-details" name="details" rows="3" placeholder="e.g. 2019 Yamaha MT-07, dropped it, front brake lever snapped"></textarea></label>
   <button type="submit" class="btn btn-lime"><span>Send &ndash; we call you back</span></button>
   <p class="fine">Hurt, or in a live lane? Call 999 first. Then call us: <a href="tel:+447520639867">07520 639867</a>.</p>
 </form>
