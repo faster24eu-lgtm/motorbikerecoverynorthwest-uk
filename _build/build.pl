@@ -318,7 +318,8 @@ for my $p (@PAGES) {
 }
 
 my $sm = qq(<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n);
-$sm .= "  <url><loc>" . url($_->{path}) . "</loc></url>\n" for grep { !$_->{noindex} } @PAGES;
+our $LASTMOD = '2026-11-09';   # date of the last content change; bump when pages change
+$sm .= "  <url><loc>" . url($_->{path}) . "</loc><lastmod>$LASTMOD</lastmod></url>\n" for grep { !$_->{noindex} } @PAGES;
 $sm .= "</urlset>\n";
 open my $s, '>:encoding(UTF-8)', "$ROOT/sitemap.xml" or die $!; print $s $sm; close $s;
 open my $r, '>', "$ROOT/robots.txt" or die $!; print $r "User-agent: *\nAllow: /\n\nSitemap: $BASE/sitemap.xml\n"; close $r;
