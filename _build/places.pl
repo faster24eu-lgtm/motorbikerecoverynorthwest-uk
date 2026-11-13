@@ -331,7 +331,14 @@ sub region_of {
   die "no region for county '$c'\n";
 }
 
+# Per-town lead and price text, so the 45 town pages share no template paragraphs (2026-11-13).
+my %TT;
+if (open my $tt, '<:encoding(UTF-8)', '_build/town_text.tsv') {
+  <$tt>;
+  while (my $l = <$tt>) { $l =~ s/\r?\n$//; my ($s, $lead, $price) = split /\t/, $l; next unless $price; s/’/&rsquo;/g for $lead, $price; $TT{$s} = { lead => $lead, price => $price } }
+}
 for my $t (@TOWNS) {
+  my $tx = $TT{$t->{slug}} or die "town_text.tsv has no line for $t->{slug}\n";
   my $n = $t->{name};
   my $N = ucfirst $n;
   (my $np = $N) =~ s/&amp;/&/g;
@@ -347,7 +354,7 @@ for my $t (@TOWNS) {
     title => fit_title("Motorbike Recovery " . ($N =~ s/^The //r) . " 24/7 | Breakdown &amp; Accident", "Motorbike Recovery " . ($N =~ s/^The //r) . " 24/7"),
     description => "24/7 motorbike and scooter recovery in $n: breakdowns, accidents and transport. Bike chocks and soft straps, price agreed upfront.",
     h1 => $t->{h1} // "Motorbike recovery in $n",
-    lead => "Breakdowns, crashes, stolen and found bikes, scooters and track bikes, recovered across $t->{county}, 24 hours a day.",
+    lead => $tx->{lead},
     body => <<"HTML",
 <p>$t->{intro}</p>
 
@@ -368,10 +375,10 @@ $l2
   <li><a href="/scooter-recovery/">Scooters &amp; mopeds</a></li>
   <li><a href="/stolen-motorbike-recovery/">Stolen bike collection</a></li>
 </ul>
-<p>Been in a crash around $t->{short}? Read <a href="/guides/after-a-motorbike-crash/">what to do after a motorbike accident</a>, step by step. Planning a motorbike accident claim in $t->{short}? We&rsquo;re not solicitors, but the recovery is part of the evidence: see <a href="/guides/motorbike-accident-claim/">what you need from the recovery for a claim</a>.</p>
+<p class="guides">Guides: <a href="/guides/after-a-motorbike-crash/">after a crash</a> &middot; <a href="/guides/motorbike-accident-claim/">accident claim</a> &middot; <a href="/guides/motorbike-recovery-cost/">recovery costs</a></p>
 
-<h2>Price</h2>
-<p>The price for a recovery around $t->{short} depends on distance, the time of day or night and how easy the bike is to load. You hear it in full on the call and agree it before anyone sets off. See <a href="/guides/motorbike-recovery-cost/">what motorbike recovery costs</a>.</p>
+<h2>Price around $t->{short}</h2>
+<p>$tx->{price} You hear the full price on the call, before anyone sets off.</p>
 
 $rl<h2>Nearby areas</h2>
 <ul class="inline">
